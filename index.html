@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>구동열 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#121826; --sub:#4a5468; --mute:#8a93a6; --line:#e3e7ee; --paper:#ffffff; --wash:#f4f6fa;
+  --acc:#1d4ed8; --acc-soft:#e8efff; --warm:#c2610c; --warm-soft:#fdebd9;
+  --display:'IBM Plex Sans KR','Noto Sans KR',sans-serif; --body:'IBM Plex Sans KR','Noto Sans KR',sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  /* layout: datasheet-style single column, 1080px max, section rails with mono index labels */
+  color-scheme: light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;letter-spacing:-0.02em}
+.mono{font-family:var(--mono)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:56px}
+.nav b{font-family:var(--display);font-size:16px}
+.nav nav{display:flex;gap:18px;margin-left:auto;font-size:14px;flex-wrap:wrap}
+.nav nav a{color:var(--sub)} .nav nav a:hover{color:var(--acc);text-decoration:none}
+@media (max-width:760px){.nav nav{display:none}}
+
+/* hero */
+.hero{padding:56px 0 48px;border-bottom:1px solid var(--line)}
+.hero .g{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:start}
+@media (max-width:760px){.hero .g{grid-template-columns:1fr}.hero .ph{order:-1;width:140px}}
+.eyebrow{font-family:var(--mono);font-size:13px;color:var(--acc);letter-spacing:.04em}
+.hero h1{font-size:clamp(34px,5vw,52px);line-height:1.15;margin:10px 0 6px;font-weight:700}
+.hero h1 small{font-size:.42em;color:var(--mute);font-weight:500;margin-left:10px;letter-spacing:0}
+.hero .tag{font-size:clamp(19px,2.4vw,24px);font-weight:600;line-height:1.45;margin:14px 0 18px;max-width:30em}
+.hero .tag em{font-style:normal;color:var(--acc)}
+.hero p.lead{color:var(--sub);max-width:40em}
+.hero .ph img{border-radius:10px;aspect-ratio:452/500;object-fit:cover}
+.sum{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;margin-top:22px}
+@media (max-width:760px){.sum{grid-template-columns:1fr}}
+.sum h2{font-size:13px;font-family:var(--mono);color:var(--acc);letter-spacing:.04em;margin-bottom:8px;font-weight:500}
+.sum h2::before{content:"[";} .sum h2::after{content:"]";}
+.sum ul{list-style:none;font-size:15px}
+.sum li{position:relative;padding-left:16px;margin-bottom:6px;color:var(--ink)}
+.sum li::before{content:"";position:absolute;left:2px;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.car{margin-top:28px}
+.stage{position:relative;border:1px solid var(--line);border-radius:10px;background:var(--wash);padding:12px}
+.stage .main{display:block;width:100%;border:0;padding:0;background:#fff;cursor:zoom-in;border-radius:4px;overflow:hidden;box-shadow:0 1px 4px rgba(18,24,38,.08)}
+.stage .main img{width:100%;height:auto}
+.cv{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.95);font-size:24px;line-height:1;color:var(--ink);cursor:pointer;box-shadow:0 2px 8px rgba(18,24,38,.12);z-index:2}
+.cv:hover{color:var(--acc);border-color:var(--acc)} .cv.pv{left:-14px} .cv.nx{right:-14px}
+@media (max-width:760px){.cv.pv{left:4px}.cv.nx{right:4px}.cv{width:38px;height:38px}}
+.cbar{display:flex;justify-content:space-between;font-size:14px;color:var(--sub);margin:10px 2px 12px}
+.thumbs{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 10px;scroll-behavior:smooth}
+.thumbs button{flex:0 0 132px;border:2px solid transparent;border-radius:6px;padding:0;background:#fff;cursor:pointer;opacity:.62;transition:opacity .15s}
+.thumbs button:hover{opacity:1}
+.thumbs button[aria-current="true"]{border-color:var(--acc);opacity:1}
+.thumbs img{width:100%;aspect-ratio:1521/1075;object-fit:cover;border-radius:4px;border:1px solid var(--line)}
+.thumbs span{display:block;font-family:var(--mono);font-size:11px;color:var(--mute);padding:3px 0}
+.pfv{display:flex;flex-direction:column;gap:18px;margin-top:28px}
+.pfv button{border:1px solid var(--line);border-radius:8px;overflow:hidden;padding:0;background:#fff;cursor:zoom-in;box-shadow:0 1px 3px rgba(18,24,38,.06)}
+.pfv img{width:100%;height:auto}
+.contact{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14.5px}
+.contact span{color:var(--mute);font-family:var(--mono);font-size:12px;margin-right:6px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:34px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.facts div{padding:16px 18px;border-right:1px solid var(--line)} .facts div:last-child{border-right:0}
+.facts b{display:block;font-family:var(--display);font-size:26px;line-height:1.2;font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--sub)}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* trace canvas */
+.trace{margin-top:30px;position:relative}
+.trace canvas{width:100%;height:84px;display:block}
+.trace .lg{position:absolute;right:0;top:-4px;font-family:var(--mono);font-size:11px;color:var(--mute);display:flex;gap:14px}
+.trace .lg i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px}
+
+section.s{padding:64px 0;border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:28px}
+@media (max-width:760px){.sh{grid-template-columns:1fr;gap:4px}}
+.sh .ix{font-family:var(--mono);font-size:13px;color:var(--mute);padding-top:10px}
+.sh h2{font-size:clamp(26px,3.4vw,34px);line-height:1.25}
+.sh p{color:var(--sub);margin-top:8px;max-width:44em}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{font-size:18px;margin-bottom:8px}
+.cards.two-c{grid-template-columns:1fr 1fr}@media (max-width:860px){.cards.two-c{grid-template-columns:1fr}}
+.card .n{font-family:var(--mono);font-size:12px;color:var(--acc)}
+.card p{font-size:14.5px;color:var(--sub)}
+.card ul{list-style:none;margin-top:10px;font-size:14px}
+.card li{padding-left:14px;position:relative;margin-bottom:4px}
+.card li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+
+.proj-head{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start;margin-bottom:24px}
+@media (max-width:860px){.proj-head{grid-template-columns:1fr}}
+.kv{display:grid;grid-template-columns:72px 1fr;gap:6px 14px;font-size:14.5px;margin-top:14px}
+.kv dt{color:var(--mute);font-family:var(--mono);font-size:12.5px;padding-top:2px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:99px;background:var(--acc-soft);color:var(--acc)}
+.pill.w{background:var(--warm-soft);color:var(--warm)} .pill.g{background:var(--wash);color:var(--sub)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-size:14px;color:var(--ink);background:#fff;cursor:pointer;font-family:var(--body)}
+.btn:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff} .btn.p:hover{background:#1e40af;color:#fff}
+
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin:30px 0 0;overflow-x:auto}
+.tabs button{border:0;background:none;font-family:var(--body);font-size:15px;padding:12px 16px;color:var(--sub);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--acc);border-bottom-color:var(--acc);font-weight:600}
+.panel{padding-top:30px}
+.panel[hidden]{display:none}
+.step{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;padding:26px 0;border-top:1px dashed var(--line)}
+.step:first-of-type{border-top:0;padding-top:0}
+@media (max-width:860px){.step{grid-template-columns:1fr}}
+.step h3{font-size:20px;margin-bottom:10px}
+.lb{display:grid;grid-template-columns:76px 1fr;gap:10px;margin-bottom:8px;font-size:14.5px}
+.lb .c{font-size:11.5px;font-weight:700;text-align:center;border-radius:4px;padding:3px 0;height:fit-content;margin-top:2px}
+.c.p{background:#fef2f2;color:#dc2626}.c.s{background:var(--acc-soft);color:var(--acc)}.c.r{background:#e7f6ec;color:#15803d}.c.y{background:var(--warm-soft);color:var(--warm)}
+.fig{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fff;overflow-x:auto}
+.fig svg{width:100%;height:auto;display:block;min-width:420px}
+.fig.wide svg{min-width:640px}
+.cap{font-size:12.5px;color:var(--mute);margin-top:8px}
+.math{font-family:var(--mono);font-size:14px;background:var(--wash);border-radius:8px;padding:12px 14px;margin:10px 0;overflow-x:auto;white-space:nowrap}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+@media (max-width:860px){.gal{grid-template-columns:repeat(2,1fr)}}
+.gal button{border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:zoom-in;background:#fff;padding:0}
+.gal button img{aspect-ratio:297/210;object-fit:cover;width:100%}
+.gal button span{display:block;font-family:var(--mono);font-size:11px;color:var(--mute);padding:5px 8px;text-align:left}
+.lbx{position:fixed;inset:0;background:rgba(10,14,24,.88);z-index:50;display:flex;align-items:center;justify-content:center;padding:24px}
+.lbx[hidden]{display:none}
+.lbx img{max-height:88vh;max-width:min(1400px,92vw);border-radius:6px;background:#fff}
+.lbx .x{position:absolute;top:16px;right:20px;color:#fff;font-size:15px;background:none;border:1px solid rgba(255,255,255,.4);border-radius:6px;padding:6px 12px;cursor:pointer;font-family:var(--body)}
+.lbx .nv{position:absolute;top:50%;transform:translateY(-50%);color:#fff;background:rgba(255,255,255,.12);border:0;border-radius:50%;width:44px;height:44px;font-size:20px;cursor:pointer}
+.lbx .pv{left:16px}.lbx .nx{right:16px}
+.lbx .pg{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:#cbd2de;font-family:var(--mono);font-size:12px}
+
+/* timeline */
+.tl{position:relative;margin-left:8px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.ti{position:relative;display:grid;grid-template-columns:150px 1fr;gap:20px;padding:0 0 30px 32px}
+@media (max-width:760px){.ti{grid-template-columns:1fr;gap:4px}}
+.ti::before{content:"";position:absolute;left:0;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--mute)}
+.ti.m::before{background:var(--acc);border-color:var(--acc)} .ti.w::before{border-color:var(--warm)}
+.ti .d{font-family:var(--mono);font-size:13px;color:var(--sub);padding-top:1px}
+.ti h3{font-size:17.5px;line-height:1.4}
+.ti p{font-size:14.5px;color:var(--sub);margin-top:2px}
+.ti .ph{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.ti .ph img{height:170px;width:auto;border-radius:6px}
+@media (max-width:760px){.ti .ph img{height:120px}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+h3.sub{font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+h3.sub::before{content:"";width:4px;height:16px;background:var(--acc);border-radius:2px}
+table.t{width:100%;border-collapse:collapse;font-size:14.5px}
+table.t td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t td.d{font-family:var(--mono);font-size:12.5px;color:var(--sub);white-space:nowrap;width:130px;padding-top:11px}
+table.t td.o{color:var(--sub);font-size:13.5px;white-space:nowrap;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;background:var(--wash);border-radius:5px;padding:3px 10px}
+.chip.a{background:var(--acc-soft);color:var(--acc);font-weight:600}
+footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
+</style></head>
+<body>
+<header class="nav"><div class="wrap"><b>구동열</b><nav aria-label="섹션">
+<a href="#project">대표 프로젝트</a><a href="#more">다른 활동</a><a href="#timeline">이력</a><a href="#profile">학력·자격</a><a href="#contact">연락처</a></nav></div></header>
+
+<main>
+<section class="hero"><div class="wrap"><div class="g"><div>
+ <h1>구동열<small>Gu Dong Yeol</small></h1>
+ <div class="sum">
+  <div><h2>Education</h2><ul>
+   <li><b>아주대학교 미래모빌리티공학과</b> 2023.03 – 2027.02 (졸업 예정)</li>
+   <li>GPA 4.25 / 4.5 (전공 4.31)</li>
+  </ul></div>
+  <div><h2>Relevant Coursework</h2><ul>
+   <li>자동제어, 전동기제어, 자율주행차공학</li>
+   <li>하이브리드자동차공학, 컴퓨터시스템</li>
+   <li>논리회로, 논리회로실험</li>
+  </ul></div>
+  <div><h2>Career Interests</h2><ul>
+   <li>자율주행 · ADAS 제어 SW 개발</li>
+   <li>차량 SW 검증 · 평가 (시뮬레이션, 실차 시험)</li>
+   <li>차량 제어기 임베디드 SW</li>
+  </ul></div>
+ </div>
+ <div class="contact"><div><span>EMAIL</span><a href="mailto:ehdduf0923@ajou.ac.kr">ehdduf0923@ajou.ac.kr</a></div><div><span>PHONE</span>010-5484-5399</div></div>
+</div><div class="ph"><img src="img/cv_face.jpg" alt="구동열 증명사진"></div></div>
+</div></section>
+
+
+<section class="s" id="project"><div class="wrap">
+<div class="sh"><div class="ix">01 / 대표 프로젝트</div><div><h2>주요 프로젝트 1: 2026 경기도 대학생 자율주행 경진대회</h2><p>유아용 전동차를 개조한 자율주행차로 차선 주행, 장애물 회피, 신호등, 자율주차 4개 과제를 모두 완주했습니다.</p></div></div>
+<div class="proj-head"><div>
+ <dl class="kv"><dt>기간</dt><dd>2025.10 – 2026.02</dd><dt>팀</dt><dd>AJOU NICE, 5인</dd><dt>담당</dt><dd>자율주차 Planner (단독 설계·구현), 조향 하위 제어기, 통신 Fail-safe</dd><dt>스택</dt><dd>ROS1 · Python · C++ · Arduino · 2D LiDAR · 카메라</dd><dt>성과</dt><dd>차선 주행 ✓ · 장애물 회피 ✓ · 신호등 ✓ · 자율주차 ✓ (4개 미션 모두 성공, 미션 감점 0점)<br><b>최우수상</b> · 차세대융합기술연구원장상 · 20팀 중 2위</dd></dl>
+ <div class="btns"><button class="btn p" type="button" data-open="0">전체 화면으로 보기</button><a class="btn" href="https://www.youtube.com/watch?v=CVi-HjeEhWo&t=24260s">본선 시연 영상 (6:44:20)</a><a class="btn" href="https://github.com/minchan0410/GGDAutonomus2026">GitHub</a></div>
+</div><div><img src="img/cv_gg2.jpg" alt="경기도 대회 최우수상 수상 사진" style="border-radius:10px"></div></div>
+<div class="car" id="car">
+ <div class="stage">
+  <button class="cv pv" type="button" id="car-p" aria-label="이전 쪽">‹</button>
+  <button class="main" type="button" id="car-main" aria-label="현재 쪽 크게 보기"><img id="car-img" src="pf/p-01.jpg" alt="기술 포트폴리오 1쪽" width="1521" height="1075"></button>
+  <button class="cv nx" type="button" id="car-n" aria-label="다음 쪽">›</button>
+ </div>
+ <div class="cbar"><span id="car-t">01 · 표지 · 담당 영역</span><span class="mono" id="car-c">1 / 16</span></div>
+ <div class="thumbs" id="car-th"><button type="button" data-k="0" aria-label="1쪽: 표지 · 담당 영역"><img src="pf/p-01.jpg" alt="" loading="lazy"><span>01</span></button><button type="button" data-k="1" aria-label="2쪽: 미션 규정"><img src="pf/p-02.jpg" alt="" loading="lazy"><span>02</span></button><button type="button" data-k="2" aria-label="3쪽: 미션 해석"><img src="pf/p-03.jpg" alt="" loading="lazy"><span>03</span></button><button type="button" data-k="3" aria-label="4쪽: 센서 · 설계 철학"><img src="pf/p-04.jpg" alt="" loading="lazy"><span>04</span></button><button type="button" data-k="4" aria-label="5쪽: 시스템 구조"><img src="pf/p-05.jpg" alt="" loading="lazy"><span>05</span></button><button type="button" data-k="5" aria-label="6쪽: 핵심 설계 결정"><img src="pf/p-06.jpg" alt="" loading="lazy"><span>06</span></button><button type="button" data-k="6" aria-label="7쪽: 8단계 상태 머신"><img src="pf/p-07.jpg" alt="" loading="lazy"><span>07</span></button><button type="button" data-k="7" aria-label="8쪽: 탐색 영역 설계"><img src="pf/p-08.jpg" alt="" loading="lazy"><span>08</span></button><button type="button" data-k="8" aria-label="9쪽: 대상 추적"><img src="pf/p-09.jpg" alt="" loading="lazy"><span>09</span></button><button type="button" data-k="9" aria-label="10쪽: 목표점 · 경로"><img src="pf/p-10.jpg" alt="" loading="lazy"><span>10</span></button><button type="button" data-k="10" aria-label="11쪽: 후진 Stanley"><img src="pf/p-11.jpg" alt="" loading="lazy"><span>11</span></button><button type="button" data-k="11" aria-label="12쪽: 하위 제어기 역할"><img src="pf/p-12.jpg" alt="" loading="lazy"><span>12</span></button><button type="button" data-k="12" aria-label="13쪽: PD 제어 구조"><img src="pf/p-13.jpg" alt="" loading="lazy"><span>13</span></button><button type="button" data-k="13" aria-label="14쪽: 게인 · 센서 보정"><img src="pf/p-14.jpg" alt="" loading="lazy"><span>14</span></button><button type="button" data-k="14" aria-label="15쪽: 통신 Fail-safe"><img src="pf/p-15.jpg" alt="" loading="lazy"><span>15</span></button><button type="button" data-k="15" aria-label="16쪽: 본선 시연 · 결과"><img src="pf/p-16.jpg" alt="" loading="lazy"><span>16</span></button></div>
+</div>
+</div></section>
+
+<section class="s" id="project2"><div class="wrap">
+<div class="sh"><div class="ix">02 / 대표 프로젝트</div><div><h2>주요 프로젝트 2: 제5회 국제 대학생 EV 자율주행 경진대회</h2><p>1/5 스케일 EV에서 LiDAR+IMU 측위(LIO-SAM) 하나로 차선·GPS·콘 구간을 모두 주행해 본선 전 구간을 완주했습니다.</p></div></div>
+<div class="proj-head"><div>
+ <dl class="kv"><dt>기간</dt><dd>2026.02 – 2026.03</dd><dt>팀</dt><dd>AJOU NICE, 5인</dd><dt>담당</dt><dd>Pure Pursuit 주행 제어기 캘리브레이션, GPS ↔ LIO-SAM 좌표 정합, 계획 파라미터 캘리브레이션, 조향 하위 제어기</dd><dt>스택</dt><dd>ROS1 · Python · C++ · LIO-SAM · 3D LiDAR · IMU · 듀얼 RTK GPS</dd><dt>성과</dt><dd>차선 · GPS · 콘 구간을 포함한 <b>본선 전 구간 완주</b> (정·역방향 두 번 주행)</dd></dl>
+ <div class="btns"><button class="btn p" type="button" data-open="1">전체 화면으로 보기</button><a class="btn" href="https://www.youtube.com/watch?v=ebUH_30xL8Y">주행 영상</a><a class="btn" href="https://github.com/5th-IS-EV-autonomous-racing-1-5/ISEV_AJOUNICE2026">GitHub</a></div>
+</div><div><img src="img/isev_team.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 팀 사진" style="border-radius:10px;aspect-ratio:4/3;object-fit:cover;object-position:center 58%"></div></div>
+<div class="car" id="car2">
+ <div class="stage">
+  <button class="cv pv" type="button" id="car2-p" aria-label="이전 쪽">‹</button>
+  <button class="main" type="button" id="car2-main" aria-label="현재 쪽 크게 보기"><img id="car2-img" src="pf2/p-01.jpg" alt="기술 포트폴리오 1쪽" width="1521" height="1075"></button>
+  <button class="cv nx" type="button" id="car2-n" aria-label="다음 쪽">›</button>
+ </div>
+ <div class="cbar"><span id="car2-t">01 · 표지 · 담당 영역</span><span class="mono" id="car2-c">1 / 23</span></div>
+ <div class="thumbs" id="car2-th"><button type="button" data-k="0" aria-label="1쪽: 표지 · 담당 영역"><img src="pf2/p-01.jpg" alt="" loading="lazy"><span>01</span></button><button type="button" data-k="1" aria-label="2쪽: 미션 · 규정"><img src="pf2/p-02.jpg" alt="" loading="lazy"><span>02</span></button><button type="button" data-k="2" aria-label="3쪽: 설계 방향"><img src="pf2/p-03.jpg" alt="" loading="lazy"><span>03</span></button><button type="button" data-k="3" aria-label="4쪽: 시스템 구조"><img src="pf2/p-04.jpg" alt="" loading="lazy"><span>04</span></button><button type="button" data-k="4" aria-label="5쪽: 센서 5종 · 한계"><img src="pf2/p-05.jpg" alt="" loading="lazy"><span>05</span></button><button type="button" data-k="5" aria-label="6쪽: LIO-SAM 개요"><img src="pf2/p-06.jpg" alt="" loading="lazy"><span>06</span></button><button type="button" data-k="6" aria-label="7쪽: LiDAR 4단계"><img src="pf2/p-07.jpg" alt="" loading="lazy"><span>07</span></button><button type="button" data-k="7" aria-label="8쪽: 팩터 그래프"><img src="pf2/p-08.jpg" alt="" loading="lazy"><span>08</span></button><button type="button" data-k="8" aria-label="9쪽: 센서별 조건 식"><img src="pf2/p-09.jpg" alt="" loading="lazy"><span>09</span></button><button type="button" data-k="9" aria-label="10쪽: 우리 차량의 LIO-SAM"><img src="pf2/p-10.jpg" alt="" loading="lazy"><span>10</span></button><button type="button" data-k="10" aria-label="11쪽: 좌표계 5개"><img src="pf2/p-11.jpg" alt="" loading="lazy"><span>11</span></button><button type="button" data-k="11" aria-label="12쪽: RDDF 좌표 변환"><img src="pf2/p-12.jpg" alt="" loading="lazy"><span>12</span></button><button type="button" data-k="12" aria-label="13쪽: GPS ↔ LIO 정합"><img src="pf2/p-13.jpg" alt="" loading="lazy"><span>13</span></button><button type="button" data-k="13" aria-label="14쪽: Tentacle 후보 경로"><img src="pf2/p-14.jpg" alt="" loading="lazy"><span>14</span></button><button type="button" data-k="14" aria-label="15쪽: 장애물 팽창"><img src="pf2/p-15.jpg" alt="" loading="lazy"><span>15</span></button><button type="button" data-k="15" aria-label="16쪽: 경로 선택 · 유지"><img src="pf2/p-16.jpg" alt="" loading="lazy"><span>16</span></button><button type="button" data-k="16" aria-label="17쪽: 속도 계획"><img src="pf2/p-17.jpg" alt="" loading="lazy"><span>17</span></button><button type="button" data-k="17" aria-label="18쪽: Pure Pursuit"><img src="pf2/p-18.jpg" alt="" loading="lazy"><span>18</span></button><button type="button" data-k="18" aria-label="19쪽: PP 캘리브레이션 실험"><img src="pf2/p-19.jpg" alt="" loading="lazy"><span>19</span></button><button type="button" data-k="19" aria-label="20쪽: lookahead 규칙"><img src="pf2/p-20.jpg" alt="" loading="lazy"><span>20</span></button><button type="button" data-k="20" aria-label="21쪽: 조향 하위 제어기"><img src="pf2/p-21.jpg" alt="" loading="lazy"><span>21</span></button><button type="button" data-k="21" aria-label="22쪽: 본선 주행 · 남은 과제"><img src="pf2/p-22.jpg" alt="" loading="lazy"><span>22</span></button><button type="button" data-k="22" aria-label="23쪽: 팀 사진"><img src="pf2/p-23.jpg" alt="" loading="lazy"><span>23</span></button></div>
+</div>
+</div></section>
+
+<section class="s" id="more"><div class="wrap">
+<div class="sh"><div class="ix">03 / 다른 활동</div><div><h2>실차 대회부터 산업 분석, 제조 AI까지</h2><p>대표 프로젝트 외에 참여한 대회·프로젝트·분석 활동입니다.</p></div></div>
+<div class="cards two-c">
+ <div class="card"><div class="n">2025.01 – 10 · 본선 진출</div><h3>대학생 창작모빌리티 경진대회</h3>
+  <p>실차 1/2 크기 ERP42로 1 km 구간에서 자율주차·장애물 회피·차선 유지·신호등 미션 수행. 판단·제어 팀원</p>
+  <ul><li>IMU 헤딩의 바이어스·노이즈 누적과 RTK fix 불안정을 실험으로 확인, RTK fix 구간의 전역 좌표 변화로 IMU 헤딩을 보정하는 알고리즘 개발</li>
+  <li>GPS 기준 경로를 Stanley로 추종, 구간 곡률·미션·신호 타이밍을 반영한 목표 속도 설정, RMSE로 튜닝</li>
+  <li>고속 구간 횡방향 진동을 yaw rate 제한 후처리로 개선</li>
+  <li>인지 팀과 콘 중심 2D 좌표 인터페이스를 합의하고 사선·평행 주차 판단과 경로 생성 구현 → 전 구간 완주</li></ul></div>
+ <div class="card"><div class="n">2026.08 – 11 · 진행</div><h3>용접 설비 AI 정비 지원 시스템</h3>
+  <p>용접건 센서 데이터로 이상 징후를 ML로 감지하고, 제조사 매뉴얼의 점검 정보와 연결하는 MVP 개발</p>
+  <ul><li>담당: 매뉴얼 기반 지식 그래프(Neo4j) 설계·구축, 고장 유형–원인–점검–조치 관계 정의</li>
+  <li>ML 출력 고장 유형으로 그래프를 조회하고 LangChain으로 LLM 답변을 만드는 Graph RAG 파이프라인</li>
+  <li>인용한 문서·페이지가 실제 검색 근거인지 검사하는 후처리</li>
+  <li>매주 요구사항·구조 검토, 격주 현직자 멘토링</li></ul></div>
+<div class="card"><div class="n">2024.10 · 대상</div><h3>아주히든챔피언 학생발굴단 11기 발표회</h3>
+  <p>차량용 팹리스 반도체 기업 텔레칩스를 심층 분석해 발표</p>
+  <ul><li>20여 팀이 참가한 최종발표회에서 100여 명 청중 앞에서 발표해 대상 수상</li>
+  <li>텔레칩스 선정, 재무·SWOT·PEST·3C 분석</li>
+  <li>Cockpit SoC · ADAS AP · Automotive MCU 등 제품 포트폴리오 조사</li>
+  <li>HR팀 현장 인터뷰: 인포테인먼트→ADAS·차량 네트워크 확장 전략 파악, SDV 전환에 따른 MCU 분산→HPC 통합 제어 산업 트렌드 확인</li></ul></div>
+</div></div></section>
+
+<section class="s" id="timeline"><div class="wrap">
+<div class="sh"><div class="ix">04 / 이력</div><div><h2>대회와 현장에서 쌓은 시간</h2></div></div>
+<div class="tl"><div class="ti "><div class="d">2023.03</div><div><h3>아주대학교 미래모빌리티공학과 입학 <span class="pill g">학업</span></h3></div></div><div class="ti m"><div class="d">2024.10</div><div><h3>아주히든챔피언 학생발굴단 11기 발표회 <span class="pill ">대상</span></h3><p>차량용 팹리스 반도체 기업 텔레칩스 심층 분석, 20여 팀 중 1위</p><div class="ph"><img src="img/cv_hc.jpg" alt="아주히든챔피언 학생발굴단 11기 발표회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2025.01 – 10</div><div><h3>2025 대학생 창작모빌리티 경진대회 <span class="pill ">본선 진출</span></h3><p>국토교통부 주최·한국교통안전공단 주관. 실차 1/2 크기 ERP42로 1 km 자율주행, 판단·제어 팀원으로 주차 로직과 경로 추종 제어기 개발, 전 구간 완주</p><div class="ph"><img src="img/cv_erp1.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"><img src="img/cv_erp2.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2025.03 – 07</div><div><h3>컴포즈커피 <span class="pill w">일경험</span></h3><p>아르바이트 · 음료 제조, 홀 매니지먼트</p></div></div><div class="ti m"><div class="d">2025.03 – 12</div><div><h3>모빌리티 소학회 'AUTOPIA' 부회장 <span class="pill g">학내활동</span></h3><p>신입생 대상 'ROS 활용 자율주행 로직 개발' 세미나 기획·강의, 조별 LKAS 구현 실습 지도</p></div></div><div class="ti m"><div class="d">2025.05 – 2026.06</div><div><h3>아주대학교 VIC Lab 학부생 인턴 <span class="pill g">연구실</span></h3><p>아반떼 CN7 실차 자율주행 시나리오 시험과 센서 데이터(rosbag) 수집, 3개 연구실 공동 논문 세미나에서 Waymo EMMA 발표, 자율주행 대회 기술 개발</p></div></div><div class="ti m"><div class="d">2025.10 – 2026.02</div><div><h3>2026 경기도 대학생 자율주행 경진대회 <span class="pill ">최우수상</span></h3><p>유아용 전동차 기반 자율주행차. 자율주차 Planner, 조향 하위 제어기, 통신 Fail-safe 담당 (대표 프로젝트 1)</p><div class="ph"><img src="img/cv_gg2.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_gg1.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.02 – 04</div><div><h3>제5회 국제 대학생 EV 자율주행 경진대회 <span class="pill ">완주</span></h3><p>국제전기자동차엑스포(IEVE) 주관. LiDAR+IMU SLAM 기반 측위 위에서 Pure Pursuit 캘리브레이션, GPS ↔ LIO-SAM 정합, 계획 파라미터, 조향 하위 제어기 담당 (대표 프로젝트 2)</p><div class="ph"><img src="img/cv_ieve2.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_ieve1.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2026.06 – 07</div><div><h3>차세대융합기술연구원 보조강사 <span class="pill w">일경험</span></h3><p>고등학생 대상 자율주행차 제작 실습교육 지원, 3D 프린터·CAD 실습 지원</p></div></div><div class="ti m"><div class="d">2026.08</div><div><h3>Huawei 'Seeds for the Future 2026' <span class="pill ">국제교류</span></h3><p>아주대학교 대표로 참가, 중국 선전·둥관 연수(9일). 한·중·일 대학생 팀으로 AI·5G·클라우드 강연과 영어 토론, 화웨이·DJI 방문</p><div class="ph"><img src="img/cv_seeds2.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"><img src="img/cv_seeds1.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.08 – 11</div><div><h3>용접 설비 AI 정비 지원 시스템 개발 <span class="pill ">프로젝트</span></h3><p>용접건 센서 ML 이상 탐지 + 정비 매뉴얼 기반 Graph RAG. 지식 그래프 구축과 LLM 답변 파이프라인 담당</p></div></div><div class="ti "><div class="d">2027.02</div><div><h3>아주대학교 졸업 예정 <span class="pill g">학업</span></h3><p>GPA 4.25 / 4.5 (전공 4.31)</p></div></div></div>
+</div></section>
+
+<section class="s" id="profile"><div class="wrap">
+<div class="sh"><div class="ix">05 / 학력·자격</div><div><h2>학력, 경력, 교육, 자격</h2></div></div>
+<div class="two"><div>
+ <h3 class="sub">학력</h3>
+ <table class="t"><tr><td class="d">2023.03 – 2027.02</td><td><b>아주대학교 미래모빌리티공학과</b><br><span style="color:var(--sub)">졸업 예정 · GPA 4.25 / 4.5 (전공 4.31) · <b style="color:var(--acc)">학과 차석</b></span></td></tr></table>
+ <h3 class="sub" style="margin-top:28px">경력</h3>
+ <table class="t">
+  <tr><td class="d">2025.05 – 2026.06</td><td><b>아주대학교 VIC Lab</b> 학부생 인턴<br><span style="color:var(--sub)">아반떼 CN7 실차 시나리오 시험·센서 데이터 수집, 공동 논문 세미나 발표, 자율주행 대회 기술 개발</span></td></tr>
+  <tr><td class="d">2026.06 – 07</td><td><b>차세대융합기술연구원</b> 보조강사<br><span style="color:var(--sub)">고등학생 대상 자율주행차 제작 실습교육, 3D 프린터·CAD 실습 지원</span></td></tr>
+  <tr><td class="d">2025.03 – 07</td><td><b>컴포즈커피</b> 아르바이트<br><span style="color:var(--sub)">음료 제조, 홀 매니지먼트</span></td></tr>
+ </table>
+ <h3 class="sub" style="margin-top:28px">자격 · 어학</h3>
+ <table class="t">
+  <tr><td class="d">2026.11.20</td><td><b>ADsP</b> 데이터분석 준전문가</td><td class="o">한국데이터산업진흥원</td></tr>
+  <tr><td class="d">2026.11.14</td><td><b>AICE Associate</b></td><td class="o">KT · 한국경제신문</td></tr>
+  <tr><td class="d">2026.04.11</td><td><b>TOEIC Speaking</b> IH (140)</td><td class="o">ETS</td></tr>
+  <tr><td class="d">2023.08</td><td>자동차 운전면허 2종 보통</td><td class="o"></td></tr>
+ </table>
+ <h3 class="sub" style="margin-top:28px">병역</h3>
+ <table class="t"><tr><td class="d">2021.01 – 2022.07</td><td>육군 병장 만기전역</td></tr></table>
+</div><div>
+ <h3 class="sub">보유 기술</h3>
+ <div style="display:grid;grid-template-columns:165px 1fr;gap:10px;align-items:center;font-size:14px">
+  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">Programming Language</span><div class="chips"><span class="chip a">Python</span><span class="chip a">C</span><span class="chip a">C++</span></div>
+  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">TOOL / SW</span><div class="chips"><span class="chip a">ROS1</span><span class="chip a">ROS2</span><span class="chip">Arduino</span><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">Git</span><span class="chip">AutoCAD</span></div>
+  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">AI / DATA</span><div class="chips"><span class="chip">pandas</span><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">LangChain</span><span class="chip">Neo4j</span></div>
+  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">언어</span><div class="chips"><span class="chip">영어 TOEIC Speaking IH</span><span class="chip">일본어 기초</span></div>
+ </div>
+ <h3 class="sub" style="margin-top:28px">교육 이수</h3>
+ <table class="t">
+  <tr><td class="d">2024.01 – 2024.06</td><td>EV 이해 · HEV/PHEV 이해</td><td class="o">현대엔지비</td></tr>
+  <tr><td class="d">2025.02</td><td>Limo PRO 활용 ROS2 교육</td><td class="o">아주대 미래자동차사업단 · 충북대</td></tr>
+  <tr><td class="d">2025.02.10 – 02.11</td><td>Siemens AMESIM 활용 미래차 DX 설계</td><td class="o">아주대 미래자동차사업단 · 충북대</td></tr>
+  <tr><td class="d">2025.02.12 – 02.14</td><td>AUTOSAR 심화 교육 (Mobilgene 실습)</td><td class="o">아주대 미래자동차사업단 · 충북대</td></tr>
+  <tr><td class="d">2025.07</td><td>CarMaker User Training</td><td class="o">IPG Automotive Korea</td></tr>
+  <tr><td class="d">2025.09</td><td>MATLAB/Simulink Onramp</td><td class="o">MathWorks</td></tr>
+  <tr><td class="d">2026.04 – 2026.06</td><td>H-모빌리티 클래스 자율주행 제어 트랙</td><td class="o">현대자동차그룹</td></tr>
+  <tr><td class="d">2026.08</td><td>LabVIEW를 활용한 계측, 제어 및 자동화</td><td class="o">아주대 미래자동차사업단</td></tr>
+  <tr><td class="d">2026.10 – 2026.11</td><td>자동차 전장 기능안전 표준 - ISO 26262 기초</td><td class="o">아주대 미래자동차사업단</td></tr>
+  <tr><td class="d">2026.11</td><td>AUTOSAR Classic Platform (CP) 기반 차량 SW 개발</td><td class="o">현대엔지비 · 경기도미래모빌리티센터</td></tr>
+ </table>
+ <h3 class="sub" style="margin-top:28px">수상</h3>
+ <table class="t"><tr><td class="d">2026.02.11</td><td>2026 경기도 대학생 자율주행 경진대회 <b style="color:var(--acc)">최우수상</b> (20팀 중 2위)</td><td class="o">차세대융합기술연구원</td></tr>
+ <tr><td class="d">2024.10.02</td><td>아주히든챔피언 학생발굴단 11기 발표회 <b style="color:var(--acc)">대상</b></td><td class="o">아주대 RISE사업단</td></tr></table>
+ <h3 class="sub" style="margin-top:28px">해외 경험</h3>
+ <table class="t"><tr><td class="d">2026.08.23 – 31</td><td>Huawei Seeds for the Future 2026 · 중국 선전·둥관 연수<br><span style="color:var(--sub);font-size:13.5px">화웨이 글로벌 ICT 인재 프로그램에 아주대 대표로 참가, 한·중·일 대학생 팀으로 AI·5G·클라우드 강연 수강과 영어 토론, 화웨이·DJI 방문</span></td></tr></table>
+</div></div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between">
+ <div><b style="color:var(--ink);font-size:15px">구동열</b> · 아주대학교 미래모빌리티공학과</div>
+ <div>ehdduf0923@ajou.ac.kr · 010-5484-5399</div>
+ <div style="flex-basis:100%;font-size:12.5px">© 2026 구동열. 무단 복제·배포를 금지합니다.</div>
+</div></footer>
+
+<div class="lbx" id="lbx" hidden role="dialog" aria-modal="true" aria-label="기술 포트폴리오 보기">
+ <button class="x" type="button" id="lbx-x">닫기</button>
+ <button class="nv pv" type="button" id="lbx-p" aria-label="이전 쪽">‹</button>
+ <img id="lbx-img" alt="">
+ <button class="nv nx" type="button" id="lbx-n" aria-label="다음 쪽">›</button>
+ <div class="pg" id="lbx-pg"></div>
+</div>
+
+<script>
+(function(){
+ const pad=n=>String(n).padStart(2,'0');
+ const SETS=[
+  {id:'car',dir:'pf',T:['표지 · 담당 영역', '미션 규정', '미션 해석', '센서 · 설계 철학', '시스템 구조', '핵심 설계 결정', '8단계 상태 머신', '탐색 영역 설계', '대상 추적', '목표점 · 경로', '후진 Stanley', '하위 제어기 역할', 'PD 제어 구조', '게인 · 센서 보정', '통신 Fail-safe', '본선 시연 · 결과']},
+  {id:'car2',dir:'pf2',T:['표지 · 담당 영역', '미션 · 규정', '설계 방향', '시스템 구조', '센서 5종 · 한계', 'LIO-SAM 개요', 'LiDAR 4단계', '팩터 그래프', '센서별 조건 식', '우리 차량의 LIO-SAM', '좌표계 5개', 'RDDF 좌표 변환', 'GPS ↔ LIO 정합', 'Tentacle 후보 경로', '장애물 팽창', '경로 선택 · 유지', '속도 계획', 'Pure Pursuit', 'PP 캘리브레이션 실험', 'lookahead 규칙', '조향 하위 제어기', '본선 주행 · 남은 과제', '팀 사진']}
+ ];
+ const L=document.getElementById('lbx'), I=document.getElementById('lbx-img'), G=document.getElementById('lbx-pg'), X=document.getElementById('lbx-x');
+ let ls=0, li=0;
+ function show(s,k){const S=SETS[s], n=S.T.length; ls=s; li=(k+n)%n; I.src=S.dir+'/p-'+pad(li+1)+'.jpg'; I.alt=S.name+' 기술 포트폴리오 '+(li+1)+'쪽, '+S.T[li]; G.textContent=(li+1)+' / '+n+' · '+S.T[li]; L.hidden=false; X.focus();}
+ SETS.forEach((S,s)=>{
+  S.name=s?'주요 프로젝트 2':'주요 프로젝트 1'; S.c=0;
+  const n=S.T.length, CI=document.getElementById(S.id+'-img'), CT=document.getElementById(S.id+'-t'), CC=document.getElementById(S.id+'-c'), TB=[...document.querySelectorAll('#'+S.id+'-th button')];
+  S.go=function(k){S.c=(k+n)%n; CI.src=S.dir+'/p-'+pad(S.c+1)+'.jpg'; CI.alt='기술 포트폴리오 '+(S.c+1)+'쪽, '+S.T[S.c]; CT.textContent=pad(S.c+1)+' · '+S.T[S.c]; CC.textContent=(S.c+1)+' / '+n;
+   TB.forEach((b,j)=>b.setAttribute('aria-current',j===S.c)); const b=TB[S.c], th=b.parentElement; th.scrollLeft=b.offsetLeft-th.clientWidth/2+b.clientWidth/2;};
+  document.getElementById(S.id+'-p').onclick=()=>S.go(S.c-1); document.getElementById(S.id+'-n').onclick=()=>S.go(S.c+1);
+  document.getElementById(S.id+'-main').onclick=()=>show(s,S.c);
+  TB.forEach(b=>b.addEventListener('click',()=>S.go(+b.dataset.k)));
+  document.getElementById(S.id).addEventListener('keydown',e=>{if(e.key==='ArrowRight'){S.go(S.c+1);e.preventDefault();} if(e.key==='ArrowLeft'){S.go(S.c-1);e.preventDefault();}});
+  for(let j=0;j<n;j++){const im=new Image(); im.src=S.dir+'/p-'+pad(j+1)+'.jpg';}
+  S.go(0);
+ });
+ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{const s=+b.dataset.open; show(s,SETS[s].c);}));
+ function close(){L.hidden=true; SETS[ls].go(li);}
+ X.onclick=close;
+ document.getElementById('lbx-p').onclick=()=>show(ls,li-1); document.getElementById('lbx-n').onclick=()=>show(ls,li+1);
+ L.addEventListener('click',e=>{if(e.target===L)close();});
+ document.addEventListener('keydown',e=>{if(L.hidden)return; if(e.key==='Escape')close(); if(e.key==='ArrowRight')show(ls,li+1); if(e.key==='ArrowLeft')show(ls,li-1);});
+})();
+</script>
+</body></html>
