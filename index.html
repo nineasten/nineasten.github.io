@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>구동열 포트폴리오</title>
+<link rel="alternate" hreflang="ko" href="ko.html">
+<title>Gu Dong Yeol · Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -79,7 +80,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;letter-spacing:-0.02em}
 .trace .lg i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px}
 
 section.s{padding:64px 0;border-bottom:1px solid var(--line)}
-.sh{display:grid;grid-template-columns:120px 1fr;gap:24px;margin-bottom:28px}
+.sh{display:grid;grid-template-columns:170px 1fr;gap:24px;margin-bottom:28px}
 @media (max-width:760px){.sh{grid-template-columns:1fr;gap:4px}}
 .sh .ix{font-family:var(--mono);font-size:13px;color:var(--mute);padding-top:10px}
 .sh h2{font-size:clamp(26px,3.4vw,34px);line-height:1.25}
@@ -165,159 +166,173 @@ table.t td.o{color:var(--sub);font-size:13.5px;white-space:nowrap;text-align:rig
 .chip{font-size:13px;background:var(--wash);border-radius:5px;padding:3px 10px}
 .chip.a{background:var(--acc-soft);color:var(--acc);font-weight:600}
 footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
+
+/* EN: stack organisation under the title instead of a nowrap right column */
+table.t,table.t tbody{display:block;width:100%}
+table.t tr{display:grid;grid-template-columns:152px 1fr;column-gap:8px;border-bottom:1px solid var(--line)}
+table.t td{border-bottom:0!important}
+table.t td.o{grid-column:2;text-align:left;white-space:normal;padding-top:0;margin-top:-4px;font-size:13px;color:var(--mute)}
+table.t td.o:empty{display:none}
+@media (max-width:560px){table.t tr{grid-template-columns:1fr}table.t td.o{grid-column:1}table.t td.d{width:auto;padding-bottom:0}}
+
+.nav .lang{margin-left:18px;font-size:13px;border:1px solid var(--line);border-radius:99px;padding:3px 12px;color:var(--sub);white-space:nowrap}
+.nav .lang:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
+@media (max-width:760px){.nav .lang{margin-left:auto}}
 </style></head>
 <body>
-<header class="nav"><div class="wrap"><b>구동열</b><nav aria-label="섹션">
-<a href="#project">대표 프로젝트</a><a href="#more">다른 활동</a><a href="#timeline">이력</a><a href="#profile">학력·자격</a><a href="#contact">연락처</a></nav></div></header>
+<header class="nav"><div class="wrap"><b>Gu Dong Yeol</b><nav aria-label="Sections">
+<a href="#project">Projects</a><a href="#more">Other Work</a><a href="#timeline">Timeline</a><a href="#profile">Profile</a><a href="#contact">Contact</a></nav><a class="lang" href="ko.html" hreflang="ko" lang="ko" aria-label="한국어로 보기">한국어</a></div></header>
 
 <main>
 <section class="hero"><div class="wrap"><div class="g"><div>
- <h1>구동열<small>Gu Dong Yeol</small></h1>
+ <h1>Gu Dong Yeol<small>구동열</small></h1>
  <div class="sum">
   <div><h2>Education</h2><ul>
-   <li><b>아주대학교 미래모빌리티공학과</b> 2023.03 – 2027.02 (졸업 예정)</li>
-   <li>GPA 4.25 / 4.5 (전공 4.31)</li>
+   <li><b>Ajou University, Dept. of Mobility Engineering</b><br>2023.03 – 2027.02 (expected)</li>
+   <li>GPA 4.25 / 4.5 (major 4.31)</li>
   </ul></div>
   <div><h2>Relevant Coursework</h2><ul>
-   <li>자동제어, 전동기제어, 자율주행차공학</li>
-   <li>하이브리드자동차공학, 컴퓨터시스템</li>
-   <li>논리회로, 논리회로실험</li>
+   <li>Automatic Control, Electric Motor Control, Autonomous Vehicle Engineering</li>
+   <li>Hybrid Vehicle Engineering, Computer Systems</li>
+   <li>Logic Circuits, Logic Circuits Lab</li>
   </ul></div>
   <div><h2>Career Interests</h2><ul>
-   <li>자율주행 · ADAS 제어 SW 개발</li>
-   <li>차량 SW 검증 · 평가 (시뮬레이션, 실차 시험)</li>
-   <li>차량 제어기 임베디드 SW</li>
+   <li>Autonomous driving · ADAS control software development</li>
+   <li>Vehicle SW verification &amp; evaluation (simulation, on-road testing)</li>
+   <li>Embedded SW for vehicle controllers</li>
   </ul></div>
  </div>
  <div class="contact"><div><span>EMAIL</span><a href="mailto:ehdduf0923@ajou.ac.kr">ehdduf0923@ajou.ac.kr</a></div><div><span>PHONE</span>010-5484-5399</div></div>
-</div><div class="ph"><img src="img/cv_face.jpg" alt="구동열 증명사진"></div></div>
+</div><div class="ph"><img src="img/cv_face.jpg" alt="Portrait of Gu Dong Yeol"></div></div>
 </div></section>
 
 
 <section class="s" id="project"><div class="wrap">
-<div class="sh"><div class="ix">01 / 대표 프로젝트</div><div><h2>주요 프로젝트 1: 2026 경기도 대학생 자율주행 경진대회</h2><p>유아용 전동차를 개조한 자율주행차로 차선 주행, 장애물 회피, 신호등, 자율주차 4개 과제를 모두 완주했습니다.</p></div></div>
+<div class="sh"><div class="ix">01 / Featured Project</div><div><h2>Featured Project 1: 2026 Gyeonggi-do University Autonomous Driving Competition</h2><p>A self-driving car converted from a children's ride-on vehicle completed all four tasks: lane driving, obstacle avoidance, traffic lights, and autonomous parking.</p></div></div>
 <div class="proj-head"><div>
- <dl class="kv"><dt>기간</dt><dd>2025.10 – 2026.02</dd><dt>팀</dt><dd>AJOU NICE, 5인</dd><dt>담당</dt><dd>자율주차 Planner (단독 설계·구현), 조향 하위 제어기, 통신 Fail-safe</dd><dt>스택</dt><dd>ROS1 · Python · C++ · Arduino · 2D LiDAR · 카메라</dd><dt>성과</dt><dd>차선 주행 ✓ · 장애물 회피 ✓ · 신호등 ✓ · 자율주차 ✓ (4개 미션 모두 성공, 미션 감점 0점)<br><b>최우수상</b> · 차세대융합기술연구원장상 · 20팀 중 2위</dd></dl>
- <div class="btns"><button class="btn p" type="button" data-open="0">전체 화면으로 보기</button><a class="btn" href="https://www.youtube.com/watch?v=CVi-HjeEhWo&t=24260s">본선 시연 영상 (6:44:20)</a><a class="btn" href="https://github.com/minchan0410/GGDAutonomus2026">GitHub</a></div>
-</div><div><img src="img/cv_gg2.jpg" alt="경기도 대회 최우수상 수상 사진" style="border-radius:10px"></div></div>
+ <dl class="kv"><dt>Period</dt><dd>2025.10 – 2026.02</dd><dt>Team</dt><dd>AJOU NICE, 5 members</dd><dt>Role</dt><dd>Autonomous parking planner (sole designer and implementer), low-level steering controller, communication fail-safe</dd><dt>Stack</dt><dd>ROS1 · Python · C++ · Arduino · 2D LiDAR · Camera</dd><dt>Result</dt><dd>Lane driving ✓ · Obstacle avoidance ✓ · Traffic light ✓ · Autonomous parking ✓ (all 4 missions passed, 0 mission penalty points)<br><b>Top Excellence Award</b> · Director's Award of AICT · 2nd of 20 teams</dd></dl>
+ <div class="btns"><button class="btn p" type="button" data-open="0">View full screen</button><a class="btn" href="https://www.youtube.com/watch?v=CVi-HjeEhWo&t=24260s">Final-round run video (6:44:20)</a><a class="btn" href="https://github.com/minchan0410/GGDAutonomus2026">GitHub</a></div>
+</div><div><img src="img/cv_gg2.jpg" alt="Award photo, Gyeonggi-do competition" style="border-radius:10px"></div></div>
+<p class="cap" style="margin-top:6px">Technical portfolio slides (written in Korean)</p>
 <div class="car" id="car">
  <div class="stage">
-  <button class="cv pv" type="button" id="car-p" aria-label="이전 쪽">‹</button>
-  <button class="main" type="button" id="car-main" aria-label="현재 쪽 크게 보기"><img id="car-img" src="pf/p-01.jpg" alt="기술 포트폴리오 1쪽" width="1521" height="1075"></button>
-  <button class="cv nx" type="button" id="car-n" aria-label="다음 쪽">›</button>
+  <button class="cv pv" type="button" id="car-p" aria-label="Previous page">‹</button>
+  <button class="main" type="button" id="car-main" aria-label="View current page larger"><img id="car-img" src="pf/p-01.jpg" alt="Technical portfolio, page 1" width="1521" height="1075"></button>
+  <button class="cv nx" type="button" id="car-n" aria-label="Next page">›</button>
  </div>
- <div class="cbar"><span id="car-t">01 · 표지 · 담당 영역</span><span class="mono" id="car-c">1 / 16</span></div>
- <div class="thumbs" id="car-th"><button type="button" data-k="0" aria-label="1쪽: 표지 · 담당 영역"><img src="pf/p-01.jpg" alt="" loading="lazy"><span>01</span></button><button type="button" data-k="1" aria-label="2쪽: 미션 규정"><img src="pf/p-02.jpg" alt="" loading="lazy"><span>02</span></button><button type="button" data-k="2" aria-label="3쪽: 미션 해석"><img src="pf/p-03.jpg" alt="" loading="lazy"><span>03</span></button><button type="button" data-k="3" aria-label="4쪽: 센서 · 설계 철학"><img src="pf/p-04.jpg" alt="" loading="lazy"><span>04</span></button><button type="button" data-k="4" aria-label="5쪽: 시스템 구조"><img src="pf/p-05.jpg" alt="" loading="lazy"><span>05</span></button><button type="button" data-k="5" aria-label="6쪽: 핵심 설계 결정"><img src="pf/p-06.jpg" alt="" loading="lazy"><span>06</span></button><button type="button" data-k="6" aria-label="7쪽: 8단계 상태 머신"><img src="pf/p-07.jpg" alt="" loading="lazy"><span>07</span></button><button type="button" data-k="7" aria-label="8쪽: 탐색 영역 설계"><img src="pf/p-08.jpg" alt="" loading="lazy"><span>08</span></button><button type="button" data-k="8" aria-label="9쪽: 대상 추적"><img src="pf/p-09.jpg" alt="" loading="lazy"><span>09</span></button><button type="button" data-k="9" aria-label="10쪽: 목표점 · 경로"><img src="pf/p-10.jpg" alt="" loading="lazy"><span>10</span></button><button type="button" data-k="10" aria-label="11쪽: 후진 Stanley"><img src="pf/p-11.jpg" alt="" loading="lazy"><span>11</span></button><button type="button" data-k="11" aria-label="12쪽: 하위 제어기 역할"><img src="pf/p-12.jpg" alt="" loading="lazy"><span>12</span></button><button type="button" data-k="12" aria-label="13쪽: PD 제어 구조"><img src="pf/p-13.jpg" alt="" loading="lazy"><span>13</span></button><button type="button" data-k="13" aria-label="14쪽: 게인 · 센서 보정"><img src="pf/p-14.jpg" alt="" loading="lazy"><span>14</span></button><button type="button" data-k="14" aria-label="15쪽: 통신 Fail-safe"><img src="pf/p-15.jpg" alt="" loading="lazy"><span>15</span></button><button type="button" data-k="15" aria-label="16쪽: 본선 시연 · 결과"><img src="pf/p-16.jpg" alt="" loading="lazy"><span>16</span></button></div>
+ <div class="cbar"><span id="car-t">01 · Cover · Role</span><span class="mono" id="car-c">1 / 16</span></div>
+ <div class="thumbs" id="car-th"><button type="button" data-k="0" aria-label="Page 1: Cover · Role"><img src="pf/p-01.jpg" alt="" loading="lazy"><span>01</span></button><button type="button" data-k="1" aria-label="Page 2: Mission Rules"><img src="pf/p-02.jpg" alt="" loading="lazy"><span>02</span></button><button type="button" data-k="2" aria-label="Page 3: Mission Analysis"><img src="pf/p-03.jpg" alt="" loading="lazy"><span>03</span></button><button type="button" data-k="3" aria-label="Page 4: Sensors · Design Philosophy"><img src="pf/p-04.jpg" alt="" loading="lazy"><span>04</span></button><button type="button" data-k="4" aria-label="Page 5: System Architecture"><img src="pf/p-05.jpg" alt="" loading="lazy"><span>05</span></button><button type="button" data-k="5" aria-label="Page 6: Key Design Decisions"><img src="pf/p-06.jpg" alt="" loading="lazy"><span>06</span></button><button type="button" data-k="6" aria-label="Page 7: 8-State Machine"><img src="pf/p-07.jpg" alt="" loading="lazy"><span>07</span></button><button type="button" data-k="7" aria-label="Page 8: Search Area Design"><img src="pf/p-08.jpg" alt="" loading="lazy"><span>08</span></button><button type="button" data-k="8" aria-label="Page 9: Target Tracking"><img src="pf/p-09.jpg" alt="" loading="lazy"><span>09</span></button><button type="button" data-k="9" aria-label="Page 10: Goal Point · Path"><img src="pf/p-10.jpg" alt="" loading="lazy"><span>10</span></button><button type="button" data-k="10" aria-label="Page 11: Reverse Stanley"><img src="pf/p-11.jpg" alt="" loading="lazy"><span>11</span></button><button type="button" data-k="11" aria-label="Page 12: Role of Low-Level Controller"><img src="pf/p-12.jpg" alt="" loading="lazy"><span>12</span></button><button type="button" data-k="12" aria-label="Page 13: PD Control Structure"><img src="pf/p-13.jpg" alt="" loading="lazy"><span>13</span></button><button type="button" data-k="13" aria-label="Page 14: Gain · Sensor Calibration"><img src="pf/p-14.jpg" alt="" loading="lazy"><span>14</span></button><button type="button" data-k="14" aria-label="Page 15: Communication Fail-safe"><img src="pf/p-15.jpg" alt="" loading="lazy"><span>15</span></button><button type="button" data-k="15" aria-label="Page 16: Final Run · Results"><img src="pf/p-16.jpg" alt="" loading="lazy"><span>16</span></button></div>
 </div>
 </div></section>
 
 <section class="s" id="project2"><div class="wrap">
-<div class="sh"><div class="ix">02 / 대표 프로젝트</div><div><h2>주요 프로젝트 2: 제5회 국제 대학생 EV 자율주행 경진대회</h2><p>1/5 스케일 EV에서 LiDAR+IMU 측위(LIO-SAM) 하나로 차선·GPS·콘 구간을 모두 주행해 본선 전 구간을 완주했습니다.</p></div></div>
+<div class="sh"><div class="ix">02 / Featured Project</div><div><h2>Featured Project 2: 5th International University Student EV Autonomous Driving Competition</h2><p>On a 1/5-scale EV, drove the lane, GPS, and cone sections with LiDAR+IMU localization (LIO-SAM) alone and completed the entire final course.</p></div></div>
 <div class="proj-head"><div>
- <dl class="kv"><dt>기간</dt><dd>2026.02 – 2026.03</dd><dt>팀</dt><dd>AJOU NICE, 5인</dd><dt>담당</dt><dd>Pure Pursuit 주행 제어기 캘리브레이션, GPS ↔ LIO-SAM 좌표 정합, 계획 파라미터 캘리브레이션, 조향 하위 제어기</dd><dt>스택</dt><dd>ROS1 · Python · C++ · LIO-SAM · 3D LiDAR · IMU · 듀얼 RTK GPS</dd><dt>성과</dt><dd>차선 · GPS · 콘 구간을 포함한 <b>본선 전 구간 완주</b> (정·역방향 두 번 주행)</dd></dl>
- <div class="btns"><button class="btn p" type="button" data-open="1">전체 화면으로 보기</button><a class="btn" href="https://www.youtube.com/watch?v=ebUH_30xL8Y">주행 영상</a><a class="btn" href="https://github.com/5th-IS-EV-autonomous-racing-1-5/ISEV_AJOUNICE2026">GitHub</a></div>
-</div><div><img src="img/isev_team.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 팀 사진" style="border-radius:10px;aspect-ratio:4/3;object-fit:cover;object-position:center 58%"></div></div>
+ <dl class="kv"><dt>Period</dt><dd>2026.02 – 2026.03</dd><dt>Team</dt><dd>AJOU NICE, 5 members</dd><dt>Role</dt><dd>Pure Pursuit controller calibration, GPS ↔ LIO-SAM coordinate alignment, planning-parameter calibration, low-level steering controller</dd><dt>Stack</dt><dd>ROS1 · Python · C++ · LIO-SAM · 3D LiDAR · IMU · Dual RTK GPS</dd><dt>Result</dt><dd>Completed the <b>entire final course</b>, including lane, GPS, and cone sections (driven twice, forward and reverse)</dd></dl>
+ <div class="btns"><button class="btn p" type="button" data-open="1">View full screen</button><a class="btn" href="https://www.youtube.com/watch?v=ebUH_30xL8Y">Run video</a><a class="btn" href="https://github.com/5th-IS-EV-autonomous-racing-1-5/ISEV_AJOUNICE2026">GitHub</a></div>
+</div><div><img src="img/isev_team.jpg" alt="Team photo, 5th International University Student EV Autonomous Driving Competition" style="border-radius:10px;aspect-ratio:4/3;object-fit:cover;object-position:center 58%"></div></div>
+<p class="cap" style="margin-top:6px">Technical portfolio slides (written in Korean)</p>
 <div class="car" id="car2">
  <div class="stage">
-  <button class="cv pv" type="button" id="car2-p" aria-label="이전 쪽">‹</button>
-  <button class="main" type="button" id="car2-main" aria-label="현재 쪽 크게 보기"><img id="car2-img" src="pf2/p-01.jpg" alt="기술 포트폴리오 1쪽" width="1521" height="1075"></button>
-  <button class="cv nx" type="button" id="car2-n" aria-label="다음 쪽">›</button>
+  <button class="cv pv" type="button" id="car2-p" aria-label="Previous page">‹</button>
+  <button class="main" type="button" id="car2-main" aria-label="View current page larger"><img id="car2-img" src="pf2/p-01.jpg" alt="Technical portfolio, page 1" width="1521" height="1075"></button>
+  <button class="cv nx" type="button" id="car2-n" aria-label="Next page">›</button>
  </div>
- <div class="cbar"><span id="car2-t">01 · 표지 · 담당 영역</span><span class="mono" id="car2-c">1 / 23</span></div>
- <div class="thumbs" id="car2-th"><button type="button" data-k="0" aria-label="1쪽: 표지 · 담당 영역"><img src="pf2/p-01.jpg" alt="" loading="lazy"><span>01</span></button><button type="button" data-k="1" aria-label="2쪽: 미션 · 규정"><img src="pf2/p-02.jpg" alt="" loading="lazy"><span>02</span></button><button type="button" data-k="2" aria-label="3쪽: 설계 방향"><img src="pf2/p-03.jpg" alt="" loading="lazy"><span>03</span></button><button type="button" data-k="3" aria-label="4쪽: 시스템 구조"><img src="pf2/p-04.jpg" alt="" loading="lazy"><span>04</span></button><button type="button" data-k="4" aria-label="5쪽: 센서 5종 · 한계"><img src="pf2/p-05.jpg" alt="" loading="lazy"><span>05</span></button><button type="button" data-k="5" aria-label="6쪽: LIO-SAM 개요"><img src="pf2/p-06.jpg" alt="" loading="lazy"><span>06</span></button><button type="button" data-k="6" aria-label="7쪽: LiDAR 4단계"><img src="pf2/p-07.jpg" alt="" loading="lazy"><span>07</span></button><button type="button" data-k="7" aria-label="8쪽: 팩터 그래프"><img src="pf2/p-08.jpg" alt="" loading="lazy"><span>08</span></button><button type="button" data-k="8" aria-label="9쪽: 센서별 조건 식"><img src="pf2/p-09.jpg" alt="" loading="lazy"><span>09</span></button><button type="button" data-k="9" aria-label="10쪽: 우리 차량의 LIO-SAM"><img src="pf2/p-10.jpg" alt="" loading="lazy"><span>10</span></button><button type="button" data-k="10" aria-label="11쪽: 좌표계 5개"><img src="pf2/p-11.jpg" alt="" loading="lazy"><span>11</span></button><button type="button" data-k="11" aria-label="12쪽: RDDF 좌표 변환"><img src="pf2/p-12.jpg" alt="" loading="lazy"><span>12</span></button><button type="button" data-k="12" aria-label="13쪽: GPS ↔ LIO 정합"><img src="pf2/p-13.jpg" alt="" loading="lazy"><span>13</span></button><button type="button" data-k="13" aria-label="14쪽: Tentacle 후보 경로"><img src="pf2/p-14.jpg" alt="" loading="lazy"><span>14</span></button><button type="button" data-k="14" aria-label="15쪽: 장애물 팽창"><img src="pf2/p-15.jpg" alt="" loading="lazy"><span>15</span></button><button type="button" data-k="15" aria-label="16쪽: 경로 선택 · 유지"><img src="pf2/p-16.jpg" alt="" loading="lazy"><span>16</span></button><button type="button" data-k="16" aria-label="17쪽: 속도 계획"><img src="pf2/p-17.jpg" alt="" loading="lazy"><span>17</span></button><button type="button" data-k="17" aria-label="18쪽: Pure Pursuit"><img src="pf2/p-18.jpg" alt="" loading="lazy"><span>18</span></button><button type="button" data-k="18" aria-label="19쪽: PP 캘리브레이션 실험"><img src="pf2/p-19.jpg" alt="" loading="lazy"><span>19</span></button><button type="button" data-k="19" aria-label="20쪽: lookahead 규칙"><img src="pf2/p-20.jpg" alt="" loading="lazy"><span>20</span></button><button type="button" data-k="20" aria-label="21쪽: 조향 하위 제어기"><img src="pf2/p-21.jpg" alt="" loading="lazy"><span>21</span></button><button type="button" data-k="21" aria-label="22쪽: 본선 주행 · 남은 과제"><img src="pf2/p-22.jpg" alt="" loading="lazy"><span>22</span></button><button type="button" data-k="22" aria-label="23쪽: 팀 사진"><img src="pf2/p-23.jpg" alt="" loading="lazy"><span>23</span></button></div>
+ <div class="cbar"><span id="car2-t">01 · Cover · Role</span><span class="mono" id="car2-c">1 / 23</span></div>
+ <div class="thumbs" id="car2-th"><button type="button" data-k="0" aria-label="Page 1: Cover · Role"><img src="pf2/p-01.jpg" alt="" loading="lazy"><span>01</span></button><button type="button" data-k="1" aria-label="Page 2: Mission · Rules"><img src="pf2/p-02.jpg" alt="" loading="lazy"><span>02</span></button><button type="button" data-k="2" aria-label="Page 3: Design Direction"><img src="pf2/p-03.jpg" alt="" loading="lazy"><span>03</span></button><button type="button" data-k="3" aria-label="Page 4: System Architecture"><img src="pf2/p-04.jpg" alt="" loading="lazy"><span>04</span></button><button type="button" data-k="4" aria-label="Page 5: 5 Sensors · Limits"><img src="pf2/p-05.jpg" alt="" loading="lazy"><span>05</span></button><button type="button" data-k="5" aria-label="Page 6: LIO-SAM Overview"><img src="pf2/p-06.jpg" alt="" loading="lazy"><span>06</span></button><button type="button" data-k="6" aria-label="Page 7: LiDAR 4 Steps"><img src="pf2/p-07.jpg" alt="" loading="lazy"><span>07</span></button><button type="button" data-k="7" aria-label="Page 8: Factor Graph"><img src="pf2/p-08.jpg" alt="" loading="lazy"><span>08</span></button><button type="button" data-k="8" aria-label="Page 9: Per-Sensor Constraint Equations"><img src="pf2/p-09.jpg" alt="" loading="lazy"><span>09</span></button><button type="button" data-k="9" aria-label="Page 10: LIO-SAM on Our Vehicle"><img src="pf2/p-10.jpg" alt="" loading="lazy"><span>10</span></button><button type="button" data-k="10" aria-label="Page 11: 5 Coordinate Frames"><img src="pf2/p-11.jpg" alt="" loading="lazy"><span>11</span></button><button type="button" data-k="11" aria-label="Page 12: RDDF Coordinate Transform"><img src="pf2/p-12.jpg" alt="" loading="lazy"><span>12</span></button><button type="button" data-k="12" aria-label="Page 13: GPS ↔ LIO Alignment"><img src="pf2/p-13.jpg" alt="" loading="lazy"><span>13</span></button><button type="button" data-k="13" aria-label="Page 14: Tentacle Candidate Paths"><img src="pf2/p-14.jpg" alt="" loading="lazy"><span>14</span></button><button type="button" data-k="14" aria-label="Page 15: Obstacle Inflation"><img src="pf2/p-15.jpg" alt="" loading="lazy"><span>15</span></button><button type="button" data-k="15" aria-label="Page 16: Path Selection · Retention"><img src="pf2/p-16.jpg" alt="" loading="lazy"><span>16</span></button><button type="button" data-k="16" aria-label="Page 17: Velocity Planning"><img src="pf2/p-17.jpg" alt="" loading="lazy"><span>17</span></button><button type="button" data-k="17" aria-label="Page 18: Pure Pursuit"><img src="pf2/p-18.jpg" alt="" loading="lazy"><span>18</span></button><button type="button" data-k="18" aria-label="Page 19: PP Calibration Experiments"><img src="pf2/p-19.jpg" alt="" loading="lazy"><span>19</span></button><button type="button" data-k="19" aria-label="Page 20: Lookahead Rule"><img src="pf2/p-20.jpg" alt="" loading="lazy"><span>20</span></button><button type="button" data-k="20" aria-label="Page 21: Low-Level Steering Controller"><img src="pf2/p-21.jpg" alt="" loading="lazy"><span>21</span></button><button type="button" data-k="21" aria-label="Page 22: Final Run · Remaining Work"><img src="pf2/p-22.jpg" alt="" loading="lazy"><span>22</span></button><button type="button" data-k="22" aria-label="Page 23: Team Photo"><img src="pf2/p-23.jpg" alt="" loading="lazy"><span>23</span></button></div>
 </div>
 </div></section>
 
 <section class="s" id="more"><div class="wrap">
-<div class="sh"><div class="ix">03 / 다른 활동</div><div><h2>실차 대회부터 산업 분석, 제조 AI까지</h2><p>대표 프로젝트 외에 참여한 대회·프로젝트·분석 활동입니다.</p></div></div>
+<div class="sh"><div class="ix">03 / Other Work</div><div><h2>From autonomous driving competitions to industry analysis and manufacturing AI</h2><p>Competitions, projects, and analysis work outside the featured projects.</p></div></div>
 <div class="cards two-c">
- <div class="card"><div class="n">2025.01 – 10 · 본선 진출</div><h3>대학생 창작모빌리티 경진대회</h3>
-  <p>실차 1/2 크기 ERP42로 1 km 구간에서 자율주차·장애물 회피·차선 유지·신호등 미션 수행. 판단·제어 팀원</p>
-  <ul><li>IMU 헤딩의 바이어스·노이즈 누적과 RTK fix 불안정을 실험으로 확인, RTK fix 구간의 전역 좌표 변화로 IMU 헤딩을 보정하는 알고리즘 개발</li>
-  <li>GPS 기준 경로를 Stanley로 추종, 구간 곡률·미션·신호 타이밍을 반영한 목표 속도 설정, RMSE로 튜닝</li>
-  <li>고속 구간 횡방향 진동을 yaw rate 제한 후처리로 개선</li>
-  <li>인지 팀과 콘 중심 2D 좌표 인터페이스를 합의하고 사선·평행 주차 판단과 경로 생성 구현 → 전 구간 완주</li></ul></div>
- <div class="card"><div class="n">2026.08 – 11 · 우수상</div><h3>용접 설비 AI 정비 지원 시스템</h3>
-  <p>용접건 센서 데이터로 이상 징후를 ML로 감지하고, 제조사 매뉴얼의 점검 정보와 연결하는 MVP 개발</p>
-  <ul><li>담당: 매뉴얼 기반 지식 그래프(Neo4j) 설계·구축, 고장 유형–원인–점검–조치 관계 정의</li>
-  <li>ML 출력 고장 유형으로 그래프를 조회하고 LangChain으로 LLM 답변을 만드는 Graph RAG 파이프라인</li>
-  <li>인용한 문서·페이지가 실제 검색 근거인지 검사하는 후처리</li>
-  <li>매주 요구사항·구조 검토, 격주 현직자 멘토링</li></ul></div>
-<div class="card"><div class="n">2024.10 · 대상</div><h3>아주히든챔피언 학생발굴단 11기 발표회</h3>
-  <p>차량용 팹리스 반도체 기업 텔레칩스를 심층 분석해 발표</p>
-  <ul><li>20여 팀이 참가한 최종발표회에서 100여 명 청중 앞에서 발표해 대상 수상</li>
-  <li>텔레칩스 선정, 재무·SWOT·PEST·3C 분석</li>
-  <li>Cockpit SoC · ADAS AP · Automotive MCU 등 제품 포트폴리오 조사</li>
-  <li>HR팀 현장 인터뷰: 인포테인먼트→ADAS·차량 네트워크 확장 전략 파악, SDV 전환에 따른 MCU 분산→HPC 통합 제어 산업 트렌드 확인</li></ul></div>
+ <div class="card"><div class="n">2025.01 – 10 · Finalist</div><h3>University Student Creative Mobility Competition</h3>
+  <p>Completed autonomous parking, obstacle avoidance, lane keeping, and traffic-light missions over a 1 km course with a half-scale ERP42. Planning &amp; control team member</p>
+  <ul><li>Confirmed through experiments that IMU heading accumulates bias and noise and that RTK fix is unstable; developed an algorithm that corrects IMU heading using changes in global coordinates during RTK-fix intervals</li>
+  <li>Tracked the GPS reference path with Stanley, set target speeds reflecting segment curvature, missions, and signal timing, and tuned with RMSE</li>
+  <li>Reduced lateral oscillation at high speed with yaw-rate-limiting post-processing</li>
+  <li>Agreed on a 2D cone-center coordinate interface with the perception team and implemented diagonal/parallel parking decisions and path generation → completed the full course</li></ul></div>
+ <div class="card"><div class="n">2026.08 – 11 · Excellence Award</div><h3>Welding-Equipment AI Maintenance Support System</h3>
+  <p>An MVP that detects anomalies from welding-gun sensor data with ML and links them to inspection information in the manufacturer's manuals</p>
+  <ul><li>Role: designed and built a manual-based knowledge graph (Neo4j); defined fault type–cause–inspection–action relations</li>
+  <li>Graph RAG pipeline that queries the graph with the ML-predicted fault type and generates LLM answers with LangChain</li>
+  <li>Post-processing that checks whether cited documents and pages are actual retrieval evidence</li>
+  <li>Weekly requirement and architecture reviews; biweekly mentoring with industry practitioners</li></ul></div>
+<div class="card"><div class="n">2024.10 · Grand Prize</div><h3>Ajou Hidden Champion Student Discovery Team, 11th Cohort Presentation</h3>
+  <p>Presented an in-depth analysis of Telechips, an automotive fabless semiconductor company</p>
+  <ul><li>Presented to an audience of 100+ at the final among 20+ teams and won the Grand Prize</li>
+  <li>Selected Telechips; financial, SWOT, PEST, and 3C analysis</li>
+  <li>Surveyed the product portfolio, including Cockpit SoC, ADAS AP, and Automotive MCU</li>
+  <li>On-site HR team interview: learned the expansion strategy from infotainment to ADAS and vehicle networking, and confirmed the industry trend from distributed MCUs to HPC-integrated control with the SDV transition</li></ul></div>
 </div></div></section>
 
 <section class="s" id="timeline"><div class="wrap">
-<div class="sh"><div class="ix">04 / 이력</div><div><h2>타임라인</h2></div></div>
-<div class="tl"><div class="ti "><div class="d">2023.03</div><div><h3>아주대학교 미래모빌리티공학과 입학 <span class="pill g">학업</span></h3></div></div><div class="ti m"><div class="d">2024.10</div><div><h3>아주히든챔피언 학생발굴단 11기 발표회 <span class="pill ">대상</span></h3><p>차량용 팹리스 반도체 기업 텔레칩스 심층 분석, 20여 팀 중 1위</p><div class="ph"><img src="img/cv_hc.jpg" alt="아주히든챔피언 학생발굴단 11기 발표회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2025.01 – 10</div><div><h3>2025 대학생 창작모빌리티 경진대회 <span class="pill ">본선 진출</span></h3><p>국토교통부 주최·한국교통안전공단 주관. 실차 1/2 크기 ERP42로 1 km 자율주행, 판단·제어 팀원으로 주차 로직과 경로 추종 제어기 개발, 전 구간 완주</p><div class="ph"><img src="img/cv_erp1.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"><img src="img/cv_erp2.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2025.03 – 07</div><div><h3>컴포즈커피 <span class="pill w">일경험</span></h3><p>아르바이트 · 음료 제조, 홀 매니지먼트</p></div></div><div class="ti m"><div class="d">2025.03 – 12</div><div><h3>모빌리티 소학회 'AUTOPIA' 부회장 <span class="pill g">학내활동</span></h3><p>신입생 대상 'ROS 활용 자율주행 로직 개발' 세미나 기획·강의, 조별 LKAS 구현 실습 지도</p></div></div><div class="ti m"><div class="d">2025.05 – 2026.06</div><div><h3>아주대학교 VIC Lab 학부생 인턴 <span class="pill g">연구실</span></h3><p>아반떼 CN7 실차 자율주행 시나리오 시험과 센서 데이터(rosbag) 수집, 3개 연구실 공동 논문 세미나에서 Waymo EMMA 발표, 자율주행 대회 기술 개발</p></div></div><div class="ti m"><div class="d">2025.10 – 2026.02</div><div><h3>2026 경기도 대학생 자율주행 경진대회 <span class="pill ">최우수상</span></h3><p>유아용 전동차 기반 자율주행차. 자율주차 Planner, 조향 하위 제어기, 통신 Fail-safe 담당 (대표 프로젝트 1)</p><div class="ph"><img src="img/cv_gg2.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_gg1.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.02 – 04</div><div><h3>제5회 국제 대학생 EV 자율주행 경진대회 <span class="pill ">완주</span></h3><p>국제전기자동차엑스포(IEVE) 주관. LiDAR+IMU SLAM 기반 측위 위에서 Pure Pursuit 캘리브레이션, GPS ↔ LIO-SAM 정합, 계획 파라미터, 조향 하위 제어기 담당 (대표 프로젝트 2)</p><div class="ph"><img src="img/cv_ieve2.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_ieve1.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2026.06 – 07</div><div><h3>차세대융합기술연구원 보조강사 <span class="pill w">일경험</span></h3><p>고등학생 대상 자율주행차 제작 실습교육 지원, 3D 프린터·CAD 실습 지원</p></div></div><div class="ti m"><div class="d">2026.08</div><div><h3>Huawei 'Seeds for the Future 2026' <span class="pill ">국제교류</span></h3><p>아주대학교 대표로 참가, 중국 선전·둥관 연수(9일). 한·중·일 대학생 팀으로 AI·5G·클라우드 강연과 영어 토론, 화웨이·DJI 방문</p><div class="ph"><img src="img/cv_seeds2.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"><img src="img/cv_seeds1.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.08 – 11</div><div><h3>용접 설비 AI 정비 지원 시스템 개발 <span class="pill ">우수상</span></h3><p>고용노동부 U3 연합 AI 직무 코어 프로젝트. 용접건 센서 ML 이상 탐지 + 정비 매뉴얼 기반 Graph RAG. 지식 그래프 구축과 LLM 답변 파이프라인 담당</p><div class="ph one"><img src="img/cv_u3.jpg" alt="U3 연합 AI 직무 코어 프로젝트 연합발표회 사진" loading="lazy"></div></div></div><div class="ti "><div class="d">2027.02</div><div><h3>아주대학교 졸업 예정 <span class="pill g">학업</span></h3><p>GPA 4.25 / 4.5 (전공 4.31)</p></div></div></div>
+<div class="sh"><div class="ix">04 / Timeline</div><div><h2>Timeline</h2></div></div>
+<div class="tl"><div class="ti "><div class="d">2023.03</div><div><h3>Entered Ajou University, Dept. of Mobility Engineering <span class="pill g">Academics</span></h3></div></div><div class="ti m"><div class="d">2024.10</div><div><h3>Ajou Hidden Champion Student Discovery Team, 11th Cohort Presentation <span class="pill ">Grand Prize</span></h3><p>In-depth analysis of Telechips, an automotive fabless semiconductor company; 1st among 20+ teams</p><div class="ph"><img src="img/cv_hc.jpg" alt="Ajou Hidden Champion 11th Cohort presentation photo" loading="lazy"></div></div></div><div class="ti m"><div class="d">2025.01 – 10</div><div><h3>2025 University Student Creative Mobility Competition <span class="pill ">Finalist</span></h3><p>Hosted by the Ministry of Land, Infrastructure and Transport and organized by the Korea Transportation Safety Authority. 1 km autonomous driving with a half-scale ERP42; as a planning &amp; control team member, developed parking logic and a path-tracking controller; completed the full course</p><div class="ph"><img src="img/cv_erp1.jpg" alt="2025 University Student Creative Mobility Competition photo" loading="lazy"><img src="img/cv_erp2.jpg" alt="2025 University Student Creative Mobility Competition photo" loading="lazy"></div></div></div><div class="ti w"><div class="d">2025.03 – 07</div><div><h3>Compose Coffee <span class="pill w">Work experience</span></h3><p>Part-time job · beverage preparation, floor management</p></div></div><div class="ti m"><div class="d">2025.03 – 12</div><div><h3>Vice President, Mobility Study Group 'AUTOPIA' <span class="pill g">On-campus</span></h3><p>Planned and taught a seminar on 'Developing autonomous driving logic with ROS' for freshmen; supervised team LKAS implementation labs</p></div></div><div class="ti m"><div class="d">2025.05 – 2026.06</div><div><h3>Undergraduate Intern, Ajou University VIC Lab <span class="pill g">Research lab</span></h3><p>Ran autonomous driving scenario tests on an Avante CN7 and collected sensor data (rosbag); presented Waymo EMMA at a joint paper seminar of three labs; developed technology for autonomous driving competitions</p></div></div><div class="ti m"><div class="d">2025.10 – 2026.02</div><div><h3>2026 Gyeonggi-do University Autonomous Driving Competition <span class="pill ">Top Excellence Award</span></h3><p>Autonomous vehicle built on a children's electric ride-on car. In charge of the autonomous parking planner, low-level steering controller, and communication fail-safe (Featured Project 1)</p><div class="ph"><img src="img/cv_gg2.jpg" alt="2026 Gyeonggi-do University Autonomous Driving Competition photo" loading="lazy"><img src="img/cv_gg1.jpg" alt="2026 Gyeonggi-do University Autonomous Driving Competition photo" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.02 – 04</div><div><h3>5th International University Student EV Autonomous Driving Competition <span class="pill ">Completed</span></h3><p>Organized by the International Electric Vehicle Expo (IEVE). On top of LiDAR+IMU SLAM-based localization, handled Pure Pursuit calibration, GPS ↔ LIO-SAM alignment, planning parameters, and the low-level steering controller (Featured Project 2)</p><div class="ph"><img src="img/cv_ieve2.jpg" alt="5th International University Student EV Autonomous Driving Competition photo" loading="lazy"><img src="img/cv_ieve1.jpg" alt="5th International University Student EV Autonomous Driving Competition photo" loading="lazy"></div></div></div><div class="ti w"><div class="d">2026.06 – 07</div><div><h3>Assistant Instructor, AICT <span class="pill w">Work experience</span></h3><p>Supported hands-on autonomous-vehicle building classes for high-school students, plus 3D printer and CAD sessions</p></div></div><div class="ti m"><div class="d">2026.08</div><div><h3>Huawei 'Seeds for the Future 2026' <span class="pill ">International exchange</span></h3><p>Represented Ajou University in a 9-day program in Shenzhen and Dongguan, China. In a Korea–China–Japan student team, attended lectures on AI, 5G, and cloud, held English discussions, and visited Huawei and DJI</p><div class="ph"><img src="img/cv_seeds2.jpg" alt="Huawei 'Seeds for the Future 2026' photo" loading="lazy"><img src="img/cv_seeds1.jpg" alt="Huawei 'Seeds for the Future 2026' photo" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.08 – 11</div><div><h3>Welding-Equipment AI Maintenance Support System <span class="pill ">Excellence Award</span></h3><p>Ministry of Employment and Labor U3 Alliance AI Job Core Project. ML anomaly detection on welding-gun sensors + Graph RAG over maintenance manuals. In charge of building the knowledge graph and the LLM answer pipeline</p><div class="ph one"><img src="img/cv_u3.jpg" alt="U3 Alliance AI Job Core Project joint presentation photo" loading="lazy"></div></div></div><div class="ti "><div class="d">2027.02</div><div><h3>Expected graduation, Ajou University <span class="pill g">Academics</span></h3><p>GPA 4.25 / 4.5 (major 4.31)</p></div></div></div>
 </div></section>
 
 <section class="s" id="profile"><div class="wrap">
-<div class="sh"><div class="ix">05 / 학력·자격</div><div><h2>학력, 경력, 교육, 자격</h2></div></div>
+<div class="sh"><div class="ix">05 / Profile</div><div><h2>Education, Experience, Training, Certifications</h2></div></div>
 <div class="two"><div>
- <h3 class="sub">학력</h3>
- <table class="t"><tr><td class="d">2023.03 – 2027.02</td><td><b>아주대학교 미래모빌리티공학과</b><br><span style="color:var(--sub)">졸업 예정 · GPA 4.25 / 4.5 (전공 4.31) · <b style="color:var(--acc)">학과 차석</b></span></td></tr></table>
- <h3 class="sub" style="margin-top:28px">경력</h3>
+ <h3 class="sub">Education</h3>
+ <table class="t"><tr><td class="d">2023.03 – 2027.02</td><td><b>Ajou University, Dept. of Mobility Engineering</b><br><span style="color:var(--sub)">Expected graduation · GPA 4.25 / 4.5 (major 4.31) · <b style="color:var(--acc)">2nd in department</b></span></td></tr></table>
+ <h3 class="sub" style="margin-top:28px">Experience</h3>
  <table class="t">
-  <tr><td class="d">2025.05 – 2026.06</td><td><b>아주대학교 VIC Lab</b> 학부생 인턴<br><span style="color:var(--sub)">아반떼 CN7 실차 시나리오 시험·센서 데이터 수집, 공동 논문 세미나 발표, 자율주행 대회 기술 개발</span></td></tr>
-  <tr><td class="d">2026.06 – 07</td><td><b>차세대융합기술연구원</b> 보조강사<br><span style="color:var(--sub)">고등학생 대상 자율주행차 제작 실습교육, 3D 프린터·CAD 실습 지원</span></td></tr>
-  <tr><td class="d">2025.03 – 07</td><td><b>컴포즈커피</b> 아르바이트<br><span style="color:var(--sub)">음료 제조, 홀 매니지먼트</span></td></tr>
+  <tr><td class="d">2025.05 – 2026.06</td><td><b>Ajou University VIC Lab</b> undergraduate intern<br><span style="color:var(--sub)">On-road scenario tests and sensor data collection on an Avante CN7, joint paper seminar presentation, technology development for autonomous driving competitions</span></td></tr>
+  <tr><td class="d">2026.06 – 07</td><td><b>Advanced Institute of Convergence Technology (AICT)</b> assistant instructor<br><span style="color:var(--sub)">Hands-on autonomous-vehicle building classes for high-school students; 3D printer and CAD session support</span></td></tr>
+  <tr><td class="d">2025.03 – 07</td><td><b>Compose Coffee</b> part-time job<br><span style="color:var(--sub)">Beverage preparation, floor management</span></td></tr>
  </table>
- <h3 class="sub" style="margin-top:28px">자격 · 어학</h3>
+ <h3 class="sub" style="margin-top:28px">Certifications &amp; Languages</h3>
  <table class="t">
-  <tr><td class="d">2026.11.20</td><td><b>ADsP</b> 데이터분석 준전문가</td><td class="o">한국데이터산업진흥원</td></tr>
-  <tr><td class="d">2026.11.14</td><td><b>AICE Associate</b></td><td class="o">KT · 한국경제신문</td></tr>
+  <tr><td class="d">2026.11.20</td><td><b>ADsP</b> Advanced Data Analytics Semi-Professional</td><td class="o">Korea Data Agency</td></tr>
+  <tr><td class="d">2026.11.14</td><td><b>AICE Associate</b></td><td class="o">KT · The Korea Economic Daily</td></tr>
   <tr><td class="d">2026.04.11</td><td><b>TOEIC Speaking</b> IH (140)</td><td class="o">ETS</td></tr>
-  <tr><td class="d">2023.08</td><td>자동차 운전면허 2종 보통</td><td class="o"></td></tr>
+  <tr><td class="d">2023.08</td><td>Driver's license, Class 2 Standard (Korea)</td><td class="o"></td></tr>
  </table>
- <h3 class="sub" style="margin-top:28px">병역</h3>
- <table class="t"><tr><td class="d">2021.01 – 2022.07</td><td>육군 병장 만기전역</td></tr></table>
+ <h3 class="sub" style="margin-top:28px">Military Service</h3>
+ <table class="t"><tr><td class="d">2021.01 – 2022.07</td><td>Republic of Korea Army, Sergeant; discharged upon completion of service</td></tr></table>
 </div><div>
- <h3 class="sub">보유 기술</h3>
+ <h3 class="sub">Skills</h3>
  <div style="display:grid;grid-template-columns:165px 1fr;gap:10px;align-items:center;font-size:14px">
   <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">Programming Language</span><div class="chips"><span class="chip a">Python</span><span class="chip a">C</span><span class="chip a">C++</span></div>
   <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">TOOL / SW</span><div class="chips"><span class="chip a">ROS1</span><span class="chip a">ROS2</span><span class="chip">Arduino</span><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">Git</span><span class="chip">AutoCAD</span></div>
   <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">AI / DATA</span><div class="chips"><span class="chip">pandas</span><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">LangChain</span></div>
-  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">언어</span><div class="chips"><span class="chip">영어 TOEIC Speaking IH</span><span class="chip">일본어 기초</span></div>
+  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">Language</span><div class="chips"><span class="chip">English: TOEIC Speaking IH</span><span class="chip">Japanese (basic)</span></div>
  </div>
- <h3 class="sub" style="margin-top:28px">교육 이수</h3>
+ <h3 class="sub" style="margin-top:28px">Training</h3>
  <table class="t">
-  <tr><td class="d">2024.01 – 2024.06</td><td>EV 이해 · HEV/PHEV 이해</td><td class="o">현대엔지비</td></tr>
-  <tr><td class="d">2025.02</td><td>Limo PRO 활용 ROS2 교육</td><td class="o">아주대 미래자동차사업단 · 충북대</td></tr>
-  <tr><td class="d">2025.02.10 – 02.11</td><td>Siemens AMESIM 활용 미래차 DX 설계</td><td class="o">아주대 미래자동차사업단 · 충북대</td></tr>
-  <tr><td class="d">2025.02.12 – 02.14</td><td>AUTOSAR 심화 교육 (Mobilgene 실습)</td><td class="o">아주대 미래자동차사업단 · 충북대</td></tr>
+  <tr><td class="d">2024.01 – 2024.06</td><td>EV Fundamentals · HEV/PHEV Fundamentals</td><td class="o">Hyundai NGV</td></tr>
+  <tr><td class="d">2025.02</td><td>ROS2 training with Limo PRO</td><td class="o">Ajou Univ. Future Automotive Program · Chungbuk National Univ.</td></tr>
+  <tr><td class="d">2025.02.10 – 02.11</td><td>Future-vehicle DX design with Siemens AMESIM</td><td class="o">Ajou Univ. Future Automotive Program · Chungbuk National Univ.</td></tr>
+  <tr><td class="d">2025.02.12 – 02.14</td><td>Advanced AUTOSAR training (Mobilgene hands-on)</td><td class="o">Ajou Univ. Future Automotive Program · Chungbuk National Univ.</td></tr>
   <tr><td class="d">2025.07</td><td>CarMaker User Training</td><td class="o">IPG Automotive Korea</td></tr>
   <tr><td class="d">2025.09</td><td>MATLAB/Simulink Onramp</td><td class="o">MathWorks</td></tr>
-  <tr><td class="d">2026.04 – 2026.06</td><td>H-모빌리티 클래스 자율주행 제어 트랙</td><td class="o">현대자동차그룹</td></tr>
-  <tr><td class="d">2026.08</td><td>LabVIEW를 활용한 계측, 제어 및 자동화</td><td class="o">아주대 미래자동차사업단</td></tr>
-  <tr><td class="d">2026.10 – 2026.11</td><td>자동차 전장 기능안전 표준 - ISO 26262 기초</td><td class="o">아주대 미래자동차사업단</td></tr>
-  <tr><td class="d">2026.11</td><td>AUTOSAR Classic Platform (CP) 기반 차량 SW 개발</td><td class="o">현대엔지비 · 경기도미래모빌리티센터</td></tr>
+  <tr><td class="d">2026.04 – 2026.06</td><td>H-Mobility Class, Autonomous Driving Control Track</td><td class="o">Hyundai Motor Group</td></tr>
+  <tr><td class="d">2026.08</td><td>Measurement, Control, and Automation with LabVIEW</td><td class="o">Ajou Univ. Future Automotive Program</td></tr>
+  <tr><td class="d">2026.10 – 2026.11</td><td>Automotive Functional Safety Standard: ISO 26262 Basics</td><td class="o">Ajou Univ. Future Automotive Program</td></tr>
+  <tr><td class="d">2026.11</td><td>Vehicle SW Development on AUTOSAR Classic Platform (CP)</td><td class="o">Hyundai NGV · Gyeonggi Future Mobility Center</td></tr>
  </table>
- <h3 class="sub" style="margin-top:28px">수상</h3>
- <table class="t"><tr><td class="d">2024.10.02</td><td>아주히든챔피언 학생발굴단 11기 발표회 <b style="color:var(--acc)">대상</b></td><td class="o">아주대 RISE사업단</td></tr>
- <tr><td class="d">2026.02.11</td><td>2026 경기도 대학생 자율주행 경진대회 <b style="color:var(--acc)">최우수상</b></td><td class="o">차세대융합기술연구원</td></tr>
- <tr><td class="d">2026.11.18</td><td>U3 연합 AI 직무 코어 프로젝트 연합발표회 · 용접 설비 AI 정비 지원 시스템 <b style="color:var(--acc)">우수상</b></td><td class="o">고용노동부 · 가천대 · 경기대 · 아주대</td></tr></table>
- <h3 class="sub" style="margin-top:28px">해외 경험</h3>
- <table class="t"><tr><td class="d">2026.08.23 – 31</td><td>Huawei Seeds for the Future 2026 · 중국 선전·둥관 연수<br><span style="color:var(--sub);font-size:13.5px">화웨이 글로벌 ICT 인재 프로그램에 아주대 대표로 참가, 한·중·일 대학생 팀으로 AI·5G·클라우드 강연 수강과 영어 토론, 화웨이·DJI 방문</span></td></tr></table>
+ <h3 class="sub" style="margin-top:28px">Awards</h3>
+ <table class="t"><tr><td class="d">2024.10.02</td><td>Ajou Hidden Champion Student Discovery Team, 11th Cohort Presentation <b style="color:var(--acc)">Grand Prize</b></td><td class="o">Ajou Univ. RISE Project Group</td></tr>
+ <tr><td class="d">2026.02.11</td><td>2026 Gyeonggi-do University Autonomous Driving Competition <b style="color:var(--acc)">Top Excellence Award</b></td><td class="o">AICT</td></tr>
+ <tr><td class="d">2026.11.18</td><td>U3 Alliance AI Job Core Project Joint Presentation · Welding-Equipment AI Maintenance Support System <b style="color:var(--acc)">Excellence Award</b></td><td class="o">Ministry of Employment and Labor · Gachon Univ. · Kyonggi Univ. · Ajou Univ.</td></tr></table>
+ <h3 class="sub" style="margin-top:28px">International Experience</h3>
+ <table class="t"><tr><td class="d">2026.08.23 – 31</td><td>Huawei Seeds for the Future 2026 · Training in Shenzhen &amp; Dongguan, China<br><span style="color:var(--sub);font-size:13.5px">Participated as Ajou University's representative in Huawei's global ICT talent program; attended lectures on AI, 5G, and cloud and held English discussions in a Korea–China–Japan student team; visited Huawei and DJI</span></td></tr></table>
 </div></div>
 </div></section>
 </main>
 
 <footer id="contact"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between">
- <div><b style="color:var(--ink);font-size:15px">구동열</b> · 아주대학교 미래모빌리티공학과</div>
+ <div><b style="color:var(--ink);font-size:15px">Gu Dong Yeol</b> · Ajou University, Dept. of Mobility Engineering</div>
  <div>ehdduf0923@ajou.ac.kr · 010-5484-5399</div>
- <div style="flex-basis:100%;font-size:12.5px">© 2026 구동열. 무단 복제·배포를 금지합니다.</div>
+ <div style="flex-basis:100%;font-size:12.5px">© 2026 Gu Dong Yeol. Unauthorized copying or distribution is prohibited.</div>
 </div></footer>
 
-<div class="lbx" id="lbx" hidden role="dialog" aria-modal="true" aria-label="기술 포트폴리오 보기">
- <button class="x" type="button" id="lbx-x">닫기</button>
- <button class="nv pv" type="button" id="lbx-p" aria-label="이전 쪽">‹</button>
+<div class="lbx" id="lbx" hidden role="dialog" aria-modal="true" aria-label="Technical portfolio viewer">
+ <button class="x" type="button" id="lbx-x">Close</button>
+ <button class="nv pv" type="button" id="lbx-p" aria-label="Previous page">‹</button>
  <img id="lbx-img" alt="">
- <button class="nv nx" type="button" id="lbx-n" aria-label="다음 쪽">›</button>
+ <button class="nv nx" type="button" id="lbx-n" aria-label="Next page">›</button>
  <div class="pg" id="lbx-pg"></div>
 </div>
 
@@ -325,16 +340,16 @@ footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
 (function(){
  const pad=n=>String(n).padStart(2,'0');
  const SETS=[
-  {id:'car',dir:'pf',T:['표지 · 담당 영역', '미션 규정', '미션 해석', '센서 · 설계 철학', '시스템 구조', '핵심 설계 결정', '8단계 상태 머신', '탐색 영역 설계', '대상 추적', '목표점 · 경로', '후진 Stanley', '하위 제어기 역할', 'PD 제어 구조', '게인 · 센서 보정', '통신 Fail-safe', '본선 시연 · 결과']},
-  {id:'car2',dir:'pf2',T:['표지 · 담당 영역', '미션 · 규정', '설계 방향', '시스템 구조', '센서 5종 · 한계', 'LIO-SAM 개요', 'LiDAR 4단계', '팩터 그래프', '센서별 조건 식', '우리 차량의 LIO-SAM', '좌표계 5개', 'RDDF 좌표 변환', 'GPS ↔ LIO 정합', 'Tentacle 후보 경로', '장애물 팽창', '경로 선택 · 유지', '속도 계획', 'Pure Pursuit', 'PP 캘리브레이션 실험', 'lookahead 규칙', '조향 하위 제어기', '본선 주행 · 남은 과제', '팀 사진']}
+  {id:'car',dir:'pf',T:['Cover · Role', 'Mission Rules', 'Mission Analysis', 'Sensors · Design Philosophy', 'System Architecture', 'Key Design Decisions', '8-State Machine', 'Search Area Design', 'Target Tracking', 'Goal Point · Path', 'Reverse Stanley', 'Role of Low-Level Controller', 'PD Control Structure', 'Gain · Sensor Calibration', 'Communication Fail-safe', 'Final Run · Results']},
+  {id:'car2',dir:'pf2',T:['Cover · Role', 'Mission · Rules', 'Design Direction', 'System Architecture', '5 Sensors · Limits', 'LIO-SAM Overview', 'LiDAR 4 Steps', 'Factor Graph', 'Per-Sensor Constraint Equations', 'LIO-SAM on Our Vehicle', '5 Coordinate Frames', 'RDDF Coordinate Transform', 'GPS ↔ LIO Alignment', 'Tentacle Candidate Paths', 'Obstacle Inflation', 'Path Selection · Retention', 'Velocity Planning', 'Pure Pursuit', 'PP Calibration Experiments', 'Lookahead Rule', 'Low-Level Steering Controller', 'Final Run · Remaining Work', 'Team Photo']}
  ];
  const L=document.getElementById('lbx'), I=document.getElementById('lbx-img'), G=document.getElementById('lbx-pg'), X=document.getElementById('lbx-x');
  let ls=0, li=0;
- function show(s,k){const S=SETS[s], n=S.T.length; ls=s; li=(k+n)%n; I.src=S.dir+'/p-'+pad(li+1)+'.jpg'; I.alt=S.name+' 기술 포트폴리오 '+(li+1)+'쪽, '+S.T[li]; G.textContent=(li+1)+' / '+n+' · '+S.T[li]; L.hidden=false; X.focus();}
+ function show(s,k){const S=SETS[s], n=S.T.length; ls=s; li=(k+n)%n; I.src=S.dir+'/p-'+pad(li+1)+'.jpg'; I.alt=S.name+' technical portfolio, page '+(li+1)+', '+S.T[li]; G.textContent=(li+1)+' / '+n+' · '+S.T[li]; L.hidden=false; X.focus();}
  SETS.forEach((S,s)=>{
-  S.name=s?'주요 프로젝트 2':'주요 프로젝트 1'; S.c=0;
+  S.name=s?'Featured Project 2':'Featured Project 1'; S.c=0;
   const n=S.T.length, CI=document.getElementById(S.id+'-img'), CT=document.getElementById(S.id+'-t'), CC=document.getElementById(S.id+'-c'), TB=[...document.querySelectorAll('#'+S.id+'-th button')];
-  S.go=function(k){S.c=(k+n)%n; CI.src=S.dir+'/p-'+pad(S.c+1)+'.jpg'; CI.alt='기술 포트폴리오 '+(S.c+1)+'쪽, '+S.T[S.c]; CT.textContent=pad(S.c+1)+' · '+S.T[S.c]; CC.textContent=(S.c+1)+' / '+n;
+  S.go=function(k){S.c=(k+n)%n; CI.src=S.dir+'/p-'+pad(S.c+1)+'.jpg'; CI.alt='Technical portfolio, page '+(S.c+1)+', '+S.T[S.c]; CT.textContent=pad(S.c+1)+' · '+S.T[S.c]; CC.textContent=(S.c+1)+' / '+n;
    TB.forEach((b,j)=>b.setAttribute('aria-current',j===S.c)); const b=TB[S.c], th=b.parentElement; th.scrollLeft=b.offsetLeft-th.clientWidth/2+b.clientWidth/2;};
   document.getElementById(S.id+'-p').onclick=()=>S.go(S.c-1); document.getElementById(S.id+'-n').onclick=()=>S.go(S.c+1);
   document.getElementById(S.id+'-main').onclick=()=>show(s,S.c);
