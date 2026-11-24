@@ -1,3 +1,8 @@
+cd C:\Users\ehdrm\Desktop\Apply\portfolio-site
 git add .
 git commit -m "Update portfolio"
 git push
+
+
+포폴 사이트
+https://nineasten.github.io/

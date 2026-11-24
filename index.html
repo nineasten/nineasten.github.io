@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>구동열 포트폴리오</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -149,7 +150,8 @@ section.s{padding:64px 0;border-bottom:1px solid var(--line)}
 .ti p{font-size:14.5px;color:var(--sub);margin-top:2px}
 .ti .ph{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .ti .ph img{height:170px;width:auto;border-radius:6px}
-@media (max-width:760px){.ti .ph img{height:120px}}
+.ti .ph.one img{height:240px}
+@media (max-width:760px){.ti .ph img{height:120px}.ti .ph.one img{height:160px;max-width:100%}}
 
 .two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 @media (max-width:860px){.two{grid-template-columns:1fr}}
@@ -235,7 +237,7 @@ footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
   <li>GPS 기준 경로를 Stanley로 추종, 구간 곡률·미션·신호 타이밍을 반영한 목표 속도 설정, RMSE로 튜닝</li>
   <li>고속 구간 횡방향 진동을 yaw rate 제한 후처리로 개선</li>
   <li>인지 팀과 콘 중심 2D 좌표 인터페이스를 합의하고 사선·평행 주차 판단과 경로 생성 구현 → 전 구간 완주</li></ul></div>
- <div class="card"><div class="n">2026.08 – 11 · 진행</div><h3>용접 설비 AI 정비 지원 시스템</h3>
+ <div class="card"><div class="n">2026.08 – 11 · 우수상</div><h3>용접 설비 AI 정비 지원 시스템</h3>
   <p>용접건 센서 데이터로 이상 징후를 ML로 감지하고, 제조사 매뉴얼의 점검 정보와 연결하는 MVP 개발</p>
   <ul><li>담당: 매뉴얼 기반 지식 그래프(Neo4j) 설계·구축, 고장 유형–원인–점검–조치 관계 정의</li>
   <li>ML 출력 고장 유형으로 그래프를 조회하고 LangChain으로 LLM 답변을 만드는 Graph RAG 파이프라인</li>
@@ -250,8 +252,8 @@ footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
 </div></div></section>
 
 <section class="s" id="timeline"><div class="wrap">
-<div class="sh"><div class="ix">04 / 이력</div><div><h2>대회와 현장에서 쌓은 시간</h2></div></div>
-<div class="tl"><div class="ti "><div class="d">2023.03</div><div><h3>아주대학교 미래모빌리티공학과 입학 <span class="pill g">학업</span></h3></div></div><div class="ti m"><div class="d">2024.10</div><div><h3>아주히든챔피언 학생발굴단 11기 발표회 <span class="pill ">대상</span></h3><p>차량용 팹리스 반도체 기업 텔레칩스 심층 분석, 20여 팀 중 1위</p><div class="ph"><img src="img/cv_hc.jpg" alt="아주히든챔피언 학생발굴단 11기 발표회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2025.01 – 10</div><div><h3>2025 대학생 창작모빌리티 경진대회 <span class="pill ">본선 진출</span></h3><p>국토교통부 주최·한국교통안전공단 주관. 실차 1/2 크기 ERP42로 1 km 자율주행, 판단·제어 팀원으로 주차 로직과 경로 추종 제어기 개발, 전 구간 완주</p><div class="ph"><img src="img/cv_erp1.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"><img src="img/cv_erp2.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2025.03 – 07</div><div><h3>컴포즈커피 <span class="pill w">일경험</span></h3><p>아르바이트 · 음료 제조, 홀 매니지먼트</p></div></div><div class="ti m"><div class="d">2025.03 – 12</div><div><h3>모빌리티 소학회 'AUTOPIA' 부회장 <span class="pill g">학내활동</span></h3><p>신입생 대상 'ROS 활용 자율주행 로직 개발' 세미나 기획·강의, 조별 LKAS 구현 실습 지도</p></div></div><div class="ti m"><div class="d">2025.05 – 2026.06</div><div><h3>아주대학교 VIC Lab 학부생 인턴 <span class="pill g">연구실</span></h3><p>아반떼 CN7 실차 자율주행 시나리오 시험과 센서 데이터(rosbag) 수집, 3개 연구실 공동 논문 세미나에서 Waymo EMMA 발표, 자율주행 대회 기술 개발</p></div></div><div class="ti m"><div class="d">2025.10 – 2026.02</div><div><h3>2026 경기도 대학생 자율주행 경진대회 <span class="pill ">최우수상</span></h3><p>유아용 전동차 기반 자율주행차. 자율주차 Planner, 조향 하위 제어기, 통신 Fail-safe 담당 (대표 프로젝트 1)</p><div class="ph"><img src="img/cv_gg2.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_gg1.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.02 – 04</div><div><h3>제5회 국제 대학생 EV 자율주행 경진대회 <span class="pill ">완주</span></h3><p>국제전기자동차엑스포(IEVE) 주관. LiDAR+IMU SLAM 기반 측위 위에서 Pure Pursuit 캘리브레이션, GPS ↔ LIO-SAM 정합, 계획 파라미터, 조향 하위 제어기 담당 (대표 프로젝트 2)</p><div class="ph"><img src="img/cv_ieve2.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_ieve1.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2026.06 – 07</div><div><h3>차세대융합기술연구원 보조강사 <span class="pill w">일경험</span></h3><p>고등학생 대상 자율주행차 제작 실습교육 지원, 3D 프린터·CAD 실습 지원</p></div></div><div class="ti m"><div class="d">2026.08</div><div><h3>Huawei 'Seeds for the Future 2026' <span class="pill ">국제교류</span></h3><p>아주대학교 대표로 참가, 중국 선전·둥관 연수(9일). 한·중·일 대학생 팀으로 AI·5G·클라우드 강연과 영어 토론, 화웨이·DJI 방문</p><div class="ph"><img src="img/cv_seeds2.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"><img src="img/cv_seeds1.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.08 – 11</div><div><h3>용접 설비 AI 정비 지원 시스템 개발 <span class="pill ">프로젝트</span></h3><p>용접건 센서 ML 이상 탐지 + 정비 매뉴얼 기반 Graph RAG. 지식 그래프 구축과 LLM 답변 파이프라인 담당</p></div></div><div class="ti "><div class="d">2027.02</div><div><h3>아주대학교 졸업 예정 <span class="pill g">학업</span></h3><p>GPA 4.25 / 4.5 (전공 4.31)</p></div></div></div>
+<div class="sh"><div class="ix">04 / 이력</div><div><h2>타임라인</h2></div></div>
+<div class="tl"><div class="ti "><div class="d">2023.03</div><div><h3>아주대학교 미래모빌리티공학과 입학 <span class="pill g">학업</span></h3></div></div><div class="ti m"><div class="d">2024.10</div><div><h3>아주히든챔피언 학생발굴단 11기 발표회 <span class="pill ">대상</span></h3><p>차량용 팹리스 반도체 기업 텔레칩스 심층 분석, 20여 팀 중 1위</p><div class="ph"><img src="img/cv_hc.jpg" alt="아주히든챔피언 학생발굴단 11기 발표회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2025.01 – 10</div><div><h3>2025 대학생 창작모빌리티 경진대회 <span class="pill ">본선 진출</span></h3><p>국토교통부 주최·한국교통안전공단 주관. 실차 1/2 크기 ERP42로 1 km 자율주행, 판단·제어 팀원으로 주차 로직과 경로 추종 제어기 개발, 전 구간 완주</p><div class="ph"><img src="img/cv_erp1.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"><img src="img/cv_erp2.jpg" alt="2025 대학생 창작모빌리티 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2025.03 – 07</div><div><h3>컴포즈커피 <span class="pill w">일경험</span></h3><p>아르바이트 · 음료 제조, 홀 매니지먼트</p></div></div><div class="ti m"><div class="d">2025.03 – 12</div><div><h3>모빌리티 소학회 'AUTOPIA' 부회장 <span class="pill g">학내활동</span></h3><p>신입생 대상 'ROS 활용 자율주행 로직 개발' 세미나 기획·강의, 조별 LKAS 구현 실습 지도</p></div></div><div class="ti m"><div class="d">2025.05 – 2026.06</div><div><h3>아주대학교 VIC Lab 학부생 인턴 <span class="pill g">연구실</span></h3><p>아반떼 CN7 실차 자율주행 시나리오 시험과 센서 데이터(rosbag) 수집, 3개 연구실 공동 논문 세미나에서 Waymo EMMA 발표, 자율주행 대회 기술 개발</p></div></div><div class="ti m"><div class="d">2025.10 – 2026.02</div><div><h3>2026 경기도 대학생 자율주행 경진대회 <span class="pill ">최우수상</span></h3><p>유아용 전동차 기반 자율주행차. 자율주차 Planner, 조향 하위 제어기, 통신 Fail-safe 담당 (대표 프로젝트 1)</p><div class="ph"><img src="img/cv_gg2.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_gg1.jpg" alt="2026 경기도 대학생 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.02 – 04</div><div><h3>제5회 국제 대학생 EV 자율주행 경진대회 <span class="pill ">완주</span></h3><p>국제전기자동차엑스포(IEVE) 주관. LiDAR+IMU SLAM 기반 측위 위에서 Pure Pursuit 캘리브레이션, GPS ↔ LIO-SAM 정합, 계획 파라미터, 조향 하위 제어기 담당 (대표 프로젝트 2)</p><div class="ph"><img src="img/cv_ieve2.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"><img src="img/cv_ieve1.jpg" alt="제5회 국제 대학생 EV 자율주행 경진대회 사진" loading="lazy"></div></div></div><div class="ti w"><div class="d">2026.06 – 07</div><div><h3>차세대융합기술연구원 보조강사 <span class="pill w">일경험</span></h3><p>고등학생 대상 자율주행차 제작 실습교육 지원, 3D 프린터·CAD 실습 지원</p></div></div><div class="ti m"><div class="d">2026.08</div><div><h3>Huawei 'Seeds for the Future 2026' <span class="pill ">국제교류</span></h3><p>아주대학교 대표로 참가, 중국 선전·둥관 연수(9일). 한·중·일 대학생 팀으로 AI·5G·클라우드 강연과 영어 토론, 화웨이·DJI 방문</p><div class="ph"><img src="img/cv_seeds2.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"><img src="img/cv_seeds1.jpg" alt="Huawei 'Seeds for the Future 2026' 사진" loading="lazy"></div></div></div><div class="ti m"><div class="d">2026.08 – 11</div><div><h3>용접 설비 AI 정비 지원 시스템 개발 <span class="pill ">우수상</span></h3><p>고용노동부 U3 연합 AI 직무 코어 프로젝트. 용접건 센서 ML 이상 탐지 + 정비 매뉴얼 기반 Graph RAG. 지식 그래프 구축과 LLM 답변 파이프라인 담당</p><div class="ph one"><img src="img/cv_u3.jpg" alt="U3 연합 AI 직무 코어 프로젝트 연합발표회 사진" loading="lazy"></div></div></div><div class="ti "><div class="d">2027.02</div><div><h3>아주대학교 졸업 예정 <span class="pill g">학업</span></h3><p>GPA 4.25 / 4.5 (전공 4.31)</p></div></div></div>
 </div></section>
 
 <section class="s" id="profile"><div class="wrap">
@@ -279,7 +281,7 @@ footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
  <div style="display:grid;grid-template-columns:165px 1fr;gap:10px;align-items:center;font-size:14px">
   <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">Programming Language</span><div class="chips"><span class="chip a">Python</span><span class="chip a">C</span><span class="chip a">C++</span></div>
   <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">TOOL / SW</span><div class="chips"><span class="chip a">ROS1</span><span class="chip a">ROS2</span><span class="chip">Arduino</span><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">Git</span><span class="chip">AutoCAD</span></div>
-  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">AI / DATA</span><div class="chips"><span class="chip">pandas</span><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">LangChain</span><span class="chip">Neo4j</span></div>
+  <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">AI / DATA</span><div class="chips"><span class="chip">pandas</span><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">LangChain</span></div>
   <span style="color:var(--mute);font-family:var(--mono);font-size:12.5px">언어</span><div class="chips"><span class="chip">영어 TOEIC Speaking IH</span><span class="chip">일본어 기초</span></div>
  </div>
  <h3 class="sub" style="margin-top:28px">교육 이수</h3>
@@ -296,8 +298,9 @@ footer{padding:40px 0 60px;color:var(--mute);font-size:13px}
   <tr><td class="d">2026.11</td><td>AUTOSAR Classic Platform (CP) 기반 차량 SW 개발</td><td class="o">현대엔지비 · 경기도미래모빌리티센터</td></tr>
  </table>
  <h3 class="sub" style="margin-top:28px">수상</h3>
- <table class="t"><tr><td class="d">2026.02.11</td><td>2026 경기도 대학생 자율주행 경진대회 <b style="color:var(--acc)">최우수상</b> (20팀 중 2위)</td><td class="o">차세대융합기술연구원</td></tr>
- <tr><td class="d">2024.10.02</td><td>아주히든챔피언 학생발굴단 11기 발표회 <b style="color:var(--acc)">대상</b></td><td class="o">아주대 RISE사업단</td></tr></table>
+ <table class="t"><tr><td class="d">2024.10.02</td><td>아주히든챔피언 학생발굴단 11기 발표회 <b style="color:var(--acc)">대상</b></td><td class="o">아주대 RISE사업단</td></tr>
+ <tr><td class="d">2026.02.11</td><td>2026 경기도 대학생 자율주행 경진대회 <b style="color:var(--acc)">최우수상</b></td><td class="o">차세대융합기술연구원</td></tr>
+ <tr><td class="d">2026.11.18</td><td>U3 연합 AI 직무 코어 프로젝트 연합발표회 · 용접 설비 AI 정비 지원 시스템 <b style="color:var(--acc)">우수상</b></td><td class="o">고용노동부 · 가천대 · 경기대 · 아주대</td></tr></table>
  <h3 class="sub" style="margin-top:28px">해외 경험</h3>
  <table class="t"><tr><td class="d">2026.08.23 – 31</td><td>Huawei Seeds for the Future 2026 · 중국 선전·둥관 연수<br><span style="color:var(--sub);font-size:13.5px">화웨이 글로벌 ICT 인재 프로그램에 아주대 대표로 참가, 한·중·일 대학생 팀으로 AI·5G·클라우드 강연 수강과 영어 토론, 화웨이·DJI 방문</span></td></tr></table>
 </div></div>
