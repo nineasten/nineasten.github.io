@@ -175,10 +175,10 @@ table.t td.o{grid-column:2;text-align:left;white-space:normal;padding-top:0;marg
 table.t td.o:empty{display:none}
 @media (max-width:560px){table.t tr{grid-template-columns:1fr}table.t td.o{grid-column:1}table.t td.d{width:auto;padding-bottom:0}}
 
-.nav .lang{display:inline-flex;margin-left:18px;font-size:13px;border:1px solid var(--acc);border-radius:99px;overflow:hidden;white-space:nowrap}
-.nav .lang a,.nav .lang span{padding:3px 13px;color:var(--sub);line-height:1.6}
+.nav .lang{display:inline-flex;flex:none;margin-left:18px;font-size:13px;border:1px solid var(--acc);border-radius:99px;overflow:hidden;white-space:nowrap}
+.nav .lang a,.nav .lang span{box-sizing:border-box;width:78px;text-align:center;padding:3px 0;color:var(--sub);line-height:1.6;font-weight:500}
 .nav .lang a:hover{background:var(--acc-soft);color:var(--acc);text-decoration:none}
-.nav .lang span[aria-current]{background:var(--acc);color:#fff;font-weight:600}
+.nav .lang span[aria-current]{background:var(--acc);color:#fff}
 .nav .lang a+span,.nav .lang span+a{border-left:1px solid var(--acc)}
 @media (max-width:760px){.nav .lang{margin-left:auto}}
 </style></head>
