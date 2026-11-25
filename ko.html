@@ -174,13 +174,16 @@ table.t td.o{grid-column:2;text-align:left;white-space:normal;padding-top:0;marg
 table.t td.o:empty{display:none}
 @media (max-width:560px){table.t tr{grid-template-columns:1fr}table.t td.o{grid-column:1}table.t td.d{width:auto;padding-bottom:0}}
 
-.nav .lang{margin-left:18px;font-size:13px;border:1px solid var(--line);border-radius:99px;padding:3px 12px;color:var(--sub);white-space:nowrap}
-.nav .lang:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
+.nav .lang{display:inline-flex;margin-left:18px;font-size:13px;border:1px solid var(--acc);border-radius:99px;overflow:hidden;white-space:nowrap}
+.nav .lang a,.nav .lang span{padding:3px 13px;color:var(--sub);line-height:1.6}
+.nav .lang a:hover{background:var(--acc-soft);color:var(--acc);text-decoration:none}
+.nav .lang span[aria-current]{background:var(--acc);color:#fff;font-weight:600}
+.nav .lang a+span,.nav .lang span+a{border-left:1px solid var(--acc)}
 @media (max-width:760px){.nav .lang{margin-left:auto}}
 </style></head>
 <body>
 <header class="nav"><div class="wrap"><b>구동열</b><nav aria-label="섹션">
-<a href="#project">대표 프로젝트</a><a href="#more">다른 활동</a><a href="#timeline">이력</a><a href="#profile">학력·자격</a><a href="#contact">연락처</a></nav><a class="lang" href="./" hreflang="en" lang="en" aria-label="View in English">English</a></div></header>
+<a href="#project">대표 프로젝트</a><a href="#more">다른 활동</a><a href="#timeline">이력</a><a href="#profile">학력·자격</a><a href="#contact">연락처</a></nav><div class="lang" role="group" aria-label="언어"><a href="./" hreflang="en" lang="en" aria-label="View in English">English</a><span lang="ko" aria-current="true">한국어</span></div></div></header>
 
 <main>
 <section class="hero"><div class="wrap"><div class="g"><div>
